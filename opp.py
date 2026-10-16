@@ -53,3 +53,31 @@
 
 # print("\nSecond Order:")
 # food2.show_details()
+
+
+
+
+# Question-3
+
+# class BankAccount:
+#     def __init__(self, balance):
+#         self.balance = balance
+
+#     def deposit(self, amount):
+#         self.balance += amount
+#         print("Deposited:", amount)
+
+#     def withdraw(self, amount):
+#         if 0 < amount <= self.balance:
+#             self.balance -= amount
+#             print("Withdrawn:", amount)
+#         else:
+#             print("Insufficient balance or invalid amount")
+
+#     def show_balance(self):
+#         print("Balance:", self.balance)
+
+# account = BankAccount(5000)
+# account.deposit(1000)
+# account.withdraw(2000)
+# account.show_balance()
