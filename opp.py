@@ -111,14 +111,36 @@
 
 # Question-5  (Hospital Management System)
 
-class Patient:
-    def __init__(self, name, disease):
+# class Patient:
+#     def __init__(self, name, disease):
+#         self.name = name
+#         self.disease = disease
+
+#     def display(self):
+#         print("Patient:", self.name)
+#         print("Problem:", self.disease)
+
+# p1 = Patient("Aman", "Fever")
+# p1.display()
+
+
+
+
+# Question-6   (Online Shopping System)
+
+class Product:
+    def __init__(self, name, price):
         self.name = name
-        self.disease = disease
+        self.price = price
 
-    def display(self):
-        print("Patient:", self.name)
-        print("Problem:", self.disease)
+    def show_product(self):
+        print("Product:", self.name)
+        print("Price:", self.price)
 
-p1 = Patient("Aman", "Fever")
-p1.display()
+    def discount(self, percent):
+        self.price -= self.price * percent / 100
+        print("Final Price:", self.price)
+
+p1 = Product("Shoes", 2000)
+p1.show_product()
+p1.discount(10)
