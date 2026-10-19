@@ -81,3 +81,25 @@
 # account.deposit(1000)
 # account.withdraw(2000)
 # account.show_balance()
+
+
+
+
+
+# Question-4
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.issued = False
+
+    def issue_book(self):
+        if not self.issued:
+            self.issued = True
+            print(self.title, "issued successfully")
+        else:
+            print("Book is already issued")
+
+book1 = Book("Python Basics", "Amit")
+book1.issue_book()
+book1.issue_book()
