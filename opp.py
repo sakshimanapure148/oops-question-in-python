@@ -149,21 +149,41 @@
 
 # Question - 7
 
-class ATM:
-    def __init__(self, balance):
-        self.balance = balance
+# class ATM:
+#     def __init__(self, balance):
+#         self.balance = balance
 
-    def check_balance(self):
-        print("Balance:", self.balance)
+#     def check_balance(self):
+#         print("Balance:", self.balance)
 
-    def withdraw(self, amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
-            print("Withdrawal successful")
+#     def withdraw(self, amount):
+#         if 0 < amount <= self.balance:
+#             self.balance -= amount
+#             print("Withdrawal successful")
+#         else:
+#             print("Invalid amount or insufficient balance")
+
+# atm = ATM(5000)
+# atm.check_balance()
+# atm.withdraw(1000)
+# atm.check_balance()
+
+
+
+
+#  Question - 8   (Quiz Application)
+
+class Quiz:
+    def __init__(self, question, answer):
+        self.question = question
+        self.answer = answer
+
+    def check_answer(self, user_answer):
+        if user_answer.lower() == self.answer.lower():
+            print("Correct Answer!")
         else:
-            print("Invalid amount or insufficient balance")
+            print("Wrong Answer!")
 
-atm = ATM(5000)
-atm.check_balance()
-atm.withdraw(1000)
-atm.check_balance()
+q1 = Quiz("What is the capital of India?", "Delhi")
+print(q1.question)
+q1.check_answer("Delhi")
