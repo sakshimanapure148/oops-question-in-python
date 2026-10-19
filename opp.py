@@ -1,4 +1,4 @@
-# Question-1
+# Question-1  (student information)
 
 # class Student:
 #     def __init__(self, name, age):
@@ -15,7 +15,7 @@
 
 
 
-# Question-2
+# Question-2  (food order)
 
 
 # class Food:
@@ -57,7 +57,7 @@
 
 
 
-# Question-3
+# Question-3  (bankaccount)
 
 # class BankAccount:
 #     def __init__(self, balance):
@@ -86,20 +86,39 @@
 
 
 
-# Question-4
-class Book:
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
-        self.issued = False
+# Question-4  (Library Management System)
 
-    def issue_book(self):
-        if not self.issued:
-            self.issued = True
-            print(self.title, "issued successfully")
-        else:
-            print("Book is already issued")
 
-book1 = Book("Python Basics", "Amit")
-book1.issue_book()
-book1.issue_book()
+# class Book:
+#     def __init__(self, title, author):
+#         self.title = title
+#         self.author = author
+#         self.issued = False
+
+#     def issue_book(self):
+#         if not self.issued:
+#             self.issued = True
+#             print(self.title, "issued successfully")
+#         else:
+#             print("Book is already issued")
+
+# book1 = Book("Python Basics", "Amit")
+# book1.issue_book()
+# book1.issue_book()
+
+
+
+
+# Question-5  (Hospital Management System)
+
+class Patient:
+    def __init__(self, name, disease):
+        self.name = name
+        self.disease = disease
+
+    def display(self):
+        print("Patient:", self.name)
+        print("Problem:", self.disease)
+
+p1 = Patient("Aman", "Fever")
+p1.display()
