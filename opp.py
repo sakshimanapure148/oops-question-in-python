@@ -173,17 +173,41 @@
 
 #  Question - 8   (Quiz Application)
 
-class Quiz:
-    def __init__(self, question, answer):
-        self.question = question
-        self.answer = answer
+# class Quiz:
+#     def __init__(self, question, answer):
+#         self.question = question
+#         self.answer = answer
 
-    def check_answer(self, user_answer):
-        if user_answer.lower() == self.answer.lower():
-            print("Correct Answer!")
-        else:
-            print("Wrong Answer!")
+#     def check_answer(self, user_answer):
+#         if user_answer.lower() == self.answer.lower():
+#             print("Correct Answer!")
+#         else:
+#             print("Wrong Answer!")
 
-q1 = Quiz("What is the capital of India?", "Delhi")
-print(q1.question)
-q1.check_answer("Delhi")
+# q1 = Quiz("What is the capital of India?", "Delhi")
+# print(q1.question)
+# q1.check_answer("Delhi")
+
+
+
+
+# Question - 9   (Employee Salary System)
+# class Employee:
+#     def __init__(self, name, salary):
+#         self.name = name
+#         self.salary = salary
+
+#     def display(self):
+#         print("Name:", self.name)
+#         print("Salary:", self.salary)
+
+
+# class Manager(Employee):
+#     def bonus(self):
+#         print("Total Salary:", self.salary + 5000)
+
+
+# m1 = Manager("Rahul", 30000)
+# m1.display()
+# m1.bonus()
+
