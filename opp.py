@@ -147,7 +147,7 @@
 
 
 
-# Question - 7
+# Question - 7   (ATM)
 
 # class ATM:
 #     def __init__(self, balance):
@@ -211,3 +211,20 @@
 # m1.display()
 # m1.bonus()
 
+
+
+
+# Question - 10   (Vehicle Inheritance)
+class Vehicle:
+    def start(self):
+        print("Vehicle is starting")
+
+
+class Car(Vehicle):
+    def drive(self):
+        print("Car is moving")
+
+
+c = Car()
+c.start()
+c.drive()
