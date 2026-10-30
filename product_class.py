@@ -9,16 +9,19 @@ class Product:
         self.quantity = quantity
 
     def calculate_total_price(self):
-        total_price = self.price * self.quantity
-        return total_price
+        return self.price * self.quantity
 
-    def display(self):
-        print(f"Product Name: {self.product_name}")
-        print(f"Price per item: ₹{self.price}")
-        print(f"Quantity: {self.quantity}")
-        print(f"Total Price: ₹{self.calculate_total_price()}")
+    def display_details(self):
+        total_price = self.calculate_total_price()
+
+        print("Product Name:", self.product_name)
+        print("Price:", self.price)
+        print("Quantity:", self.quantity)
+        print("Total Price:", total_price)
 
 
-if __name__ == "__main__":
-    product1 = Product("Notebook", 50, 4)
-    product1.display()
+# Create an object of the Product class
+product1 = Product("Notebook", 50, 4)
+
+# Display product details and total price
+product1.display_details()
