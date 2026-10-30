@@ -3,19 +3,20 @@
 # Calculate the total price using a method.
 
 class Product:
-    def __init__(self, name, price, quantity):
-        self.name = name
+    def __init__(self, product_name, price, quantity):
+        self.product_name = product_name
         self.price = price
         self.quantity = quantity
 
     def calculate_total_price(self):
-        return self.price * self.quantity
+        total_price = self.price * self.quantity
+        return total_price
 
     def display(self):
-        print("Product Name:", self.name)
-        print("Price per item: ₹", self.price)
-        print("Quantity:", self.quantity)
-        print("Total Price: ₹", self.calculate_total_price())
+        print(f"Product Name: {self.product_name}")
+        print(f"Price per item: ₹{self.price}")
+        print(f"Quantity: {self.quantity}")
+        print(f"Total Price: ₹{self.calculate_total_price()}")
 
 
 if __name__ == "__main__":
