@@ -1,21 +1,21 @@
 # OOP Project: Event Ticket Booking System
-# Concepts: classes, objects, constructors, encapsulation, methods,
-# validation, object interaction, and exception handling.
+# Concepts: classes, objects, constructors, methods, validation,
+# object interaction, exception handling, and encapsulation basics.
 
 from decimal import Decimal, InvalidOperation
 
 
 class Event:
     def __init__(self, name, ticket_price, available_tickets):
-        if not name.strip():
+        if not isinstance(name, str) or not name.strip():
             raise ValueError("Event name cannot be empty.")
 
         try:
-            ticket_price = Decimal(str(ticket_price))
+            price = Decimal(str(ticket_price))
         except (InvalidOperation, ValueError):
             raise ValueError("Ticket price must be a valid number.")
 
-        if not ticket_price.is_finite() or ticket_price <= 0:
+        if not price.is_finite() or price <= 0:
             raise ValueError("Ticket price must be greater than zero.")
 
         if not isinstance(available_tickets, int) or isinstance(available_tickets, bool):
@@ -24,11 +24,11 @@ class Event:
             raise ValueError("Available tickets cannot be negative.")
 
         self.name = name.strip()
-        self.ticket_price = ticket_price
+        self.ticket_price = price
         self.available_tickets = available_tickets
 
     def book_tickets(self, customer_name, quantity):
-        if not customer_name.strip():
+        if not isinstance(customer_name, str) or not customer_name.strip():
             raise ValueError("Customer name cannot be empty.")
         if not isinstance(quantity, int) or isinstance(quantity, bool):
             raise ValueError("Ticket quantity must be a whole number.")
@@ -39,6 +39,7 @@ class Event:
                 f"Only {self.available_tickets} ticket(s) are available."
             )
 
+        # Reduce availability only after all checks pass.
         self.available_tickets -= quantity
         return TicketBooking(self, customer_name.strip(), quantity)
 
@@ -76,7 +77,7 @@ class TicketBooking:
 
         self.event.available_tickets += self.quantity
         self.is_cancelled = True
-        print("Booking cancelled. Tickets have been returned.")
+        print("Booking cancelled successfully. Tickets returned.")
 
     def display_ticket(self):
         print("\n========== BOOKING RECEIPT ==========")
@@ -93,21 +94,28 @@ class TicketBooking:
 
 
 if __name__ == "__main__":
-    # Create an event with a limited number of tickets.
     tech_fest = Event("Tech Fest 2026", 250, 20)
 
+    print("--- EVENT DETAILS ---")
     tech_fest.show_event_status()
 
     try:
-        # Book 6 tickets to receive the 10% group discount.
+        # Booking 6 tickets gives a 10% group discount.
         booking = tech_fest.book_tickets("Sakshi", 6)
+
+        print("\n--- CONFIRMED BOOKING ---")
         booking.display_ticket()
 
-        print("\nAfter booking:")
+        print("\n--- AVAILABILITY AFTER BOOKING ---")
         tech_fest.show_event_status()
 
-        # Uncomment the next line to practise cancellation:
-        # booking.cancel_booking()
+        # Demonstrate cancellation and ticket restoration.
+        print("\n--- CANCELLING BOOKING ---")
+        booking.cancel_booking()
+        booking.display_ticket()
+
+        print("\n--- AVAILABILITY AFTER CANCELLATION ---")
+        tech_fest.show_event_status()
 
     except ValueError as error:
         print("Booking failed:", error)
