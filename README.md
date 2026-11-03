@@ -7,6 +7,7 @@ A Python practice repository for object-oriented programming (OOP). The original
 - `opp.py` — original OOP questions and examples.
 - `laptop_class.py` — Laptop class with brand, RAM, and a display method.
 - `calculator_methods.py` — Calculator class with addition, subtraction, and multiplication methods.
+- `daily_task_2026_11_03.py` — Music Playlist Manager using classes, encapsulation, validation, and object interaction.
 
 ## Concepts covered
 
@@ -26,6 +27,7 @@ A Python practice repository for object-oriented programming (OOP). The original
 python opp.py
 python laptop_class.py
 python calculator_methods.py
+python daily_task_2026_11_03.py
 ```
 
 On Windows, use `py` instead of `python` if needed.
