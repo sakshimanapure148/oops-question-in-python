@@ -1,11 +1,11 @@
-# OOP Project: Event Ticket Booking System
-# Concepts: classes, objects, constructors, methods, validation,
-# object interaction, exception handling, and encapsulation basics.
+"""Mini-project: event ticket booking with safe validation and cancellation."""
 
 from decimal import Decimal, InvalidOperation
 
 
 class Event:
+    """Represent an event and manage its available ticket count."""
+
     def __init__(self, name, ticket_price, available_tickets):
         if not isinstance(name, str) or not name.strip():
             raise ValueError("Event name cannot be empty.")
@@ -13,15 +13,16 @@ class Event:
         try:
             price = Decimal(str(ticket_price))
         except (InvalidOperation, ValueError):
-            raise ValueError("Ticket price must be a valid number.")
+            raise ValueError("Ticket price must be a valid number.") from None
 
         if not price.is_finite() or price <= 0:
             raise ValueError("Ticket price must be greater than zero.")
-
-        if not isinstance(available_tickets, int) or isinstance(available_tickets, bool):
-            raise ValueError("Available tickets must be a whole number.")
-        if available_tickets < 0:
-            raise ValueError("Available tickets cannot be negative.")
+        if (
+            isinstance(available_tickets, bool)
+            or not isinstance(available_tickets, int)
+            or available_tickets < 0
+        ):
+            raise ValueError("Available tickets must be a non-negative whole number.")
 
         self.name = name.strip()
         self.ticket_price = price
@@ -30,16 +31,11 @@ class Event:
     def book_tickets(self, customer_name, quantity):
         if not isinstance(customer_name, str) or not customer_name.strip():
             raise ValueError("Customer name cannot be empty.")
-        if not isinstance(quantity, int) or isinstance(quantity, bool):
-            raise ValueError("Ticket quantity must be a whole number.")
-        if quantity <= 0:
-            raise ValueError("Please book at least one ticket.")
+        if isinstance(quantity, bool) or not isinstance(quantity, int) or quantity <= 0:
+            raise ValueError("Ticket quantity must be a positive whole number.")
         if quantity > self.available_tickets:
-            raise ValueError(
-                f"Only {self.available_tickets} ticket(s) are available."
-            )
+            raise ValueError(f"Only {self.available_tickets} ticket(s) are available.")
 
-        # Reduce availability only after all checks pass.
         self.available_tickets -= quantity
         return TicketBooking(self, customer_name.strip(), quantity)
 
@@ -50,6 +46,8 @@ class Event:
 
 
 class TicketBooking:
+    """Represent one booking linked to its Event object."""
+
     DISCOUNT_LIMIT = 5
     DISCOUNT_RATE = Decimal("0.10")
 
@@ -73,49 +71,37 @@ class TicketBooking:
     def cancel_booking(self):
         if self.is_cancelled:
             print("This booking has already been cancelled.")
-            return
+            return False
 
         self.event.available_tickets += self.quantity
         self.is_cancelled = True
-        print("Booking cancelled successfully. Tickets returned.")
+        print("Booking cancelled. Tickets returned to availability.")
+        return True
 
     def display_ticket(self):
         print("\n========== BOOKING RECEIPT ==========")
         print(f"Customer: {self.customer_name}")
         print(f"Event: {self.event.name}")
-        print(f"Tickets booked: {self.quantity}")
-        print(f"Price per ticket: Rs. {self.event.ticket_price:.2f}")
+        print(f"Tickets: {self.quantity}")
         print(f"Subtotal: Rs. {self.calculate_subtotal():.2f}")
         print(f"Discount: Rs. {self.calculate_discount():.2f}")
         print(f"Final amount: Rs. {self.calculate_total():.2f}")
-        status = "Cancelled" if self.is_cancelled else "Confirmed"
-        print(f"Booking status: {status}")
+        print(f"Status: {'Cancelled' if self.is_cancelled else 'Confirmed'}")
         print("=====================================")
 
 
 if __name__ == "__main__":
     tech_fest = Event("Tech Fest 2026", 250, 20)
-
-    print("--- EVENT DETAILS ---")
     tech_fest.show_event_status()
 
     try:
-        # Booking 6 tickets gives a 10% group discount.
         booking = tech_fest.book_tickets("Sakshi", 6)
-
-        print("\n--- CONFIRMED BOOKING ---")
         booking.display_ticket()
-
-        print("\n--- AVAILABILITY AFTER BOOKING ---")
         tech_fest.show_event_status()
 
-        # Demonstrate cancellation and ticket restoration.
-        print("\n--- CANCELLING BOOKING ---")
         booking.cancel_booking()
+        booking.cancel_booking()  # A second cancellation changes nothing.
         booking.display_ticket()
-
-        print("\n--- AVAILABILITY AFTER CANCELLATION ---")
         tech_fest.show_event_status()
-
     except ValueError as error:
         print("Booking failed:", error)
