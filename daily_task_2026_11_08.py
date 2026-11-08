@@ -165,9 +165,6 @@ class RentalDesk:
         if equipment.is_available:
             print(f"{equipment.name} has no active rental.")
             return None
-        if return_date < equipment.due_date - timedelta(days=36500):
-            raise ValueError("Return date is invalid.")
-
         late_days = max(0, (return_date - equipment.due_date).days)
         late_fee = late_days * self.late_fee_per_day
         equipment._receive_back()
