@@ -14,7 +14,8 @@ A beginner-friendly collection of Python Object-Oriented Programming exercises a
 | `event_ticket_booking.py` | Object interaction, booking, cancellation and money calculations |
 | `daily_task_2026_11_03.py` | Playlist manager, encapsulation and duplicate prevention |
 | `daily_task_2026_11_04.py` | Plant-care tracker, properties, date handling and validation |
-| `course_registration_system.py` | Student and Course classes, encapsulation, enrollment, duplicate prevention and course capacity |
+| `daily_task_2026_11_08.py` | Photography equipment rental, inheritance, encapsulation and late-fee calculations |
+| `course_registration_system.py` | Course and Student classes, enrollment, duplicate prevention and course capacity |
 
 ## Concepts covered
 
@@ -22,7 +23,8 @@ A beginner-friendly collection of Python Object-Oriented Programming exercises a
 - Encapsulation and private attributes
 - Inheritance, `super()` and method overriding
 - Instance methods and object interaction
-- Input validation and simple program design
+- Input validation, properties and date calculations
+- Composition and managing collections of objects
 
 ## Requirements
 
@@ -34,6 +36,7 @@ A beginner-friendly collection of Python Object-Oriented Programming exercises a
 Open a terminal in this repository and run the file you want to practise:
 
 ```bash
+python daily_task_2026_11_08.py
 python course_registration_system.py
 python opp.py
 python laptop_class.py
@@ -47,20 +50,21 @@ python daily_task_2026_11_04.py
 
 On Windows, you can use `py` instead of `python`.
 
-## Today's OOP task: Course Registration System
+## Today's OOP task: Photography Equipment Rental Tracker
 
-The program models a course and its students. It demonstrates:
+The program manages cameras and tripods that can be rented from a small equipment desk. It demonstrates:
 
-1. Creating Student objects with an ID and name.
-2. Creating a Course with an instructor and a maximum capacity.
-3. Enrolling students while preventing duplicate registrations.
-4. Rejecting enrollment when the course is full.
-5. Removing a student by ID.
-6. Displaying course details, available seats and the enrolled-student list.
+1. Creating a reusable `Equipment` base class.
+2. Using inheritance and method overriding in `Camera` and `Tripod`.
+3. Keeping availability and due dates encapsulated.
+4. Adding equipment while preventing duplicate IDs.
+5. Renting available equipment and calculating rental charges.
+6. Returning equipment and calculating late fees from the due date.
+7. Validating names, IDs, rental periods and dates.
 
 ## Learning tip
 
-Run one file at a time, predict the output, and experiment with different values. Try adding another course or testing what happens when you remove a student who is not enrolled.
+Run one file at a time, predict the output, and experiment with different values. Try adding another equipment type or testing a return that happens before the due date.
 
 ## Author
 
