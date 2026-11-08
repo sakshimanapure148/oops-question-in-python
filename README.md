@@ -1,71 +1,91 @@
 # Python OOP Practice
 
-A beginner-friendly collection of Python Object-Oriented Programming exercises and mini-projects by **Sakshi Manapure**.
+A collection of beginner-friendly Python Object-Oriented Programming (OOP) exercises and practical mini-projects by **Sakshi Manapure**.
 
-## Repository structure
+The goal of this repository is to strengthen Python fundamentals through small, readable programs with real-world examples.
 
-| File | What you will practise |
+## Repository Structure
+
+| File | Topic / Concepts |
 |---|---|
-| `opp.py` | OOP fundamentals, inheritance, method overriding and polymorphism |
-| `laptop_class.py` | Classes, objects, constructors, attributes and methods |
+| `opp.py` | OOP fundamentals, inheritance, overriding and polymorphism |
+| `laptop_class.py` | Classes, objects, constructors and attributes |
 | `calculator_methods.py` | Instance methods and arithmetic operations |
-| `employee_salary.py` | Methods, input validation and annual salary calculation |
-| `product_class.py` | Properties, quantity validation and total-price calculation |
-| `event_ticket_booking.py` | Object interaction, booking, cancellation and money calculations |
+| `employee_salary.py` | Methods, validation and salary calculations |
+| `product_class.py` | Properties, quantity validation and total price |
+| `event_ticket_booking.py` | Object interaction, booking and cancellation |
 | `daily_task_2026_11_03.py` | Playlist manager, encapsulation and duplicate prevention |
-| `daily_task_2026_11_04.py` | Plant-care tracker, properties, date handling and validation |
-| `daily_task_2026_11_08.py` | Photography equipment rental, inheritance, encapsulation and late-fee calculations |
-| `course_registration_system.py` | Course and Student classes, enrollment, duplicate prevention and course capacity |
+| `daily_task_2026_11_04.py` | Plant-care tracker, properties and date handling |
+| `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
+| `course_registration_system.py` | Student/course objects, enrollment and capacity validation |
 
-## Concepts covered
+## Latest Task — 08 November 2026
 
-- Classes, objects, constructors (`__init__`), attributes and methods
-- Encapsulation and private attributes
-- Inheritance, `super()` and method overriding
-- Instance methods and object interaction
-- Input validation, properties and date calculations
-- Composition and managing collections of objects
+### Photography Equipment Rental Tracker
 
-## Requirements
+**Problem statement:** Build a small rental system that manages photography equipment such as cameras and tripods. A customer can rent available equipment for a selected number of days and return it later.
 
-- Python 3.9 or later
-- No third-party packages are required
+**OOP design:**
 
-## Run a file
+- `Equipment`: Base class containing equipment ID, name, daily rate and rental availability.
+- `Camera`: Child class that adds sensor information.
+- `Tripod`: Child class that adds maximum height information.
+- `RentalDesk`: Manages the inventory, rental process, returns and late fees.
 
-Open a terminal in this repository and run the file you want to practise:
+**Features implemented:**
+
+1. Add equipment to the inventory.
+2. Prevent duplicate equipment IDs.
+3. Display equipment details and availability.
+4. Rent equipment and calculate the rental amount.
+5. Prevent an already-rented item from being rented again.
+6. Return rented equipment and calculate late fees.
+7. Validate IDs, names, rates, rental periods and dates.
+8. Use fixed sample dates and assertions for predictable demonstrations.
+
+**Concepts practised:** Classes and objects, constructors, inheritance, `super()`, method overriding, encapsulation, properties, composition, validation and date calculations.
+
+## How to Run
+
+**Requirements:** Python 3.9 or later. No external packages are needed.
+
+1. Clone or download this repository.
+2. Open the project folder in VS Code or a terminal.
+3. Run the task file:
 
 ```bash
 python daily_task_2026_11_08.py
-python course_registration_system.py
-python opp.py
-python laptop_class.py
-python calculator_methods.py
-python employee_salary.py
-python product_class.py
-python event_ticket_booking.py
-python daily_task_2026_11_03.py
-python daily_task_2026_11_04.py
 ```
 
-On Windows, you can use `py` instead of `python`.
+On Windows, you can also use:
 
-## Today's OOP task: Photography Equipment Rental Tracker
+```bash
+py daily_task_2026_11_08.py
+```
 
-The program manages cameras and tripods that can be rented from a small equipment desk. It demonstrates:
+To run another exercise, replace the filename with the file you want to practise.
 
-1. Creating a reusable `Equipment` base class.
-2. Using inheritance and method overriding in `Camera` and `Tripod`.
-3. Keeping availability and due dates encapsulated.
-4. Adding equipment while preventing duplicate IDs.
-5. Renting available equipment and calculating rental charges.
-6. Returning equipment and calculating late fees from the due date.
-7. Validating names, IDs, rental periods and dates.
+## Other OOP Concepts Covered
 
-## Learning tip
+- Classes, objects, attributes and methods
+- The `__init__()` constructor
+- Encapsulation and private attributes
+- Inheritance and `super()`
+- Method overriding and polymorphism
+- Properties and data validation
+- Managing multiple objects with dictionaries
+- Working with dates and calculating amounts
 
-Run one file at a time, predict the output, and experiment with different values. Try adding another equipment type or testing a return that happens before the due date.
+## Practice Suggestions
+
+- Add another equipment type, such as a camera lens.
+- Try renting an item that is already rented.
+- Test a return made after the due date.
+- Add more validation for user input.
+- Create your own mini-project using the same OOP concepts.
 
 ## Author
 
-[Sakshi Manapure](https://github.com/sakshimanapure148)
+**Sakshi Manapure**
+
+[GitHub Profile](https://github.com/sakshimanapure148)
