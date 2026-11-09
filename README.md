@@ -26,7 +26,7 @@ This repository is a daily learning space to practise writing clean, reusable Py
 | `daily_task_2026_11_03.py` | Playlist manager, encapsulation and duplicate prevention |
 | `daily_task_2026_11_04.py` | Plant-care tracker, properties and date handling |
 | `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
-| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
+| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |\n| `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
 
 ## Latest Daily Task — 09 November 2026
 
@@ -94,7 +94,7 @@ On Windows, you can also run:
 py daily_task_2026_11_09.py
 ```
 
-## How to Run Any Exercise
+## Run Automated Tests\n\nThe parcel tracking project includes unit tests using Python's built-in `unittest` framework. From the repository folder, run:\n\n```bash\npython -m unittest -v\n```\n\nThe tests check shipping-cost calculations, invalid weights, delivery-status rules, duplicate tracking IDs and total collection. No third-party testing package is required.\n\n## How to Run Any Exercise
 
 1. Clone or download this repository.
 2. Open the project folder in VS Code or a terminal.
