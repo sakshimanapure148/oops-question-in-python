@@ -17,6 +17,7 @@ The goal of this repository is to strengthen Python fundamentals through small, 
 | `daily_task_2026_11_03.py` | Playlist manager, encapsulation and duplicate prevention |
 | `daily_task_2026_11_04.py` | Plant-care tracker, properties and date handling |
 | `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
+| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
 | `course_registration_system.py` | Student/course objects, enrollment and capacity validation |
 
 ## Latest Task — 08 November 2026
@@ -44,6 +45,39 @@ The goal of this repository is to strengthen Python fundamentals through small, 
 8. Use fixed sample dates and assertions for predictable demonstrations.
 
 **Concepts practised:** Classes and objects, constructors, inheritance, `super()`, method overriding, encapsulation, properties, composition, validation and date calculations.
+
+
+| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
+
+## Latest Task — 09 November 2026
+
+### Parcel Delivery Tracking System
+
+**Problem statement:** Create a parcel tracking system that registers parcels, tracks delivery progress and calculates shipping charges.
+
+**OOP design:**
+- `Parcel`: Base class with tracking ID, receiver, weight and private delivery status.
+- `ExpressParcel`: Adds an express delivery surcharge by overriding the shipping method.
+- `FragileParcel`: Adds a special-handling surcharge through method overriding.
+- `DeliveryHub`: Registers parcels, prevents duplicate tracking IDs and tracks shipments.
+
+**Features implemented:**
+1. Register regular, express and fragile parcels.
+2. Validate tracking IDs, receiver names and parcel weights.
+3. Prevent duplicate tracking IDs.
+4. Keep delivery status encapsulated with a read-only property.
+5. Prevent delivery statuses from moving backwards.
+6. Track a parcel using its tracking ID.
+7. Calculate shipping charges using polymorphism.
+8. Run assertion checks for expected costs and status updates.
+
+**Concepts practised:** Classes, objects, inheritance, `super()`, encapsulation, properties, method overriding, polymorphism, dictionaries, validation and assertions.
+
+**Run the task:**
+```bash
+python daily_task_2026_11_09.py
+```
+
 
 ## How to Run
 
