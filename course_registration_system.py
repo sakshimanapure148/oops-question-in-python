@@ -13,8 +13,15 @@ Concepts:
 
 class Student:
     def __init__(self, student_id, name):
+        if not isinstance(student_id, (str, int)) or isinstance(student_id, bool):
+            raise TypeError("Student ID must be a string or integer.")
+        if not str(student_id).strip():
+            raise ValueError("Student ID cannot be empty.")
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError("Student name cannot be empty.")
+
         self.student_id = student_id
-        self.name = name
+        self.name = name.strip()
 
     def display(self):
         print(f"Student ID: {self.student_id} | Name: {self.name}")
@@ -22,32 +29,44 @@ class Student:
 
 class Course:
     def __init__(self, course_name, instructor, capacity):
-        self.course_name = course_name
-        self.instructor = instructor
+        if not isinstance(course_name, str) or not course_name.strip():
+            raise ValueError("Course name cannot be empty.")
+        if not isinstance(instructor, str) or not instructor.strip():
+            raise ValueError("Instructor name cannot be empty.")
+        if isinstance(capacity, bool) or not isinstance(capacity, int) or capacity <= 0:
+            raise ValueError("Capacity must be a positive whole number.")
+
+        self.course_name = course_name.strip()
+        self.instructor = instructor.strip()
         self.capacity = capacity
         self.__students = []
 
     def enroll_student(self, student):
+        if not isinstance(student, Student):
+            raise TypeError("Only Student objects can be enrolled.")
+
         for enrolled_student in self.__students:
             if enrolled_student.student_id == student.student_id:
                 print(f"{student.name} is already enrolled.")
-                return
+                return False
 
         if len(self.__students) >= self.capacity:
             print(f"Sorry! {self.course_name} is full.")
-            return
+            return False
 
         self.__students.append(student)
         print(f"{student.name} enrolled successfully in {self.course_name}.")
+        return True
 
     def remove_student(self, student_id):
         for student in self.__students:
             if student.student_id == student_id:
                 self.__students.remove(student)
                 print(f"{student.name} has been removed from the course.")
-                return
+                return True
 
         print("Student ID not found in this course.")
+        return False
 
     def show_course_details(self):
         print("\n========== COURSE DETAILS ==========")
