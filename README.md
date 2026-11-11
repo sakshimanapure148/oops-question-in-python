@@ -27,6 +27,7 @@ This repository is a daily learning space to practise writing clean, reusable Py
 | `daily_task_2026_11_04.py` | Plant-care tracker, properties and date handling |
 | `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
 | `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
+| `daily_task_2026_11_11.py` | Smart home energy monitor, inheritance, encapsulation and polymorphism |
 | `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
 
 ## Latest Daily Task — 11 November 2026
