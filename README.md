@@ -26,9 +26,69 @@ This repository is a daily learning space to practise writing clean, reusable Py
 | `daily_task_2026_11_03.py` | Playlist manager, encapsulation and duplicate prevention |
 | `daily_task_2026_11_04.py` | Plant-care tracker, properties and date handling |
 | `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
-| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |\n| `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
+| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
+| `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
 
-## Latest Daily Task — 11 November 2026\n\n### Smart Home Energy Monitor\n\n**Problem statement:** Build a small smart-home system that manages different electrical devices and calculates their energy consumption in kilowatt-hours (kWh).\n\n### OOP Design\n\n- **`SmartDevice`** — Base class that stores device details, protects the power state and calculates energy usage.\n- **`SmartLight`, `SmartFan` and `SmartAirConditioner`** — Child classes that override the device-type method.\n- **`SmartHome`** — Manages device registration, searching, reports and total energy usage.\n\n### Features\n\n1. Register different types of smart devices.\n2. Validate device IDs, names and power ratings.\n3. Prevent duplicate device IDs.\n4. Switch devices on and off using methods.\n5. Keep the power state private and expose it through a read-only property.\n6. Calculate energy usage only while a device is switched on.\n7. Display device details using method overriding and polymorphism.\n8. Calculate total household energy consumption in kWh.\n9. Validate usage hours and demonstrate error handling.\n\n### Concepts Practised\n\n`class`, `object`, `__init__()`, inheritance, `super()` (as a follow-up extension), encapsulation, private attributes, `@property`, method overriding, polymorphism, dictionaries, validation, exception handling and assertions.\n\n### Sample Output\n\n```text\n--- Sakshi's Smart Home: Device Report ---\nL101 | Living Room Light | Smart Light | ON | 0.060 kWh\nF201 | Bedroom Fan | Smart Fan | ON | 0.375 kWh\nAC301 | Hall AC | Smart AC | OFF | 0.000 kWh\nTotal energy for 5 hours: 0.435 kWh\n\nFound: Bedroom Fan is ON.\nDuplicate check passed: A device with this ID already exists.\nHours validation passed: Hours cannot be negative.\nAll checks passed successfully.\n```\n\n### Run the Latest Task\n\nMake sure Python 3.9 or later is installed. No external packages are required.\n\n```bash\npython daily_task_2026_11_11.py\n```\n\nOn Windows, you can also run:\n\n```bash\npy daily_task_2026_11_11.py\n```\n\n---\n\n## Previous Daily Task — 09 November 2026
+## Latest Daily Task — 11 November 2026
+
+### Smart Home Energy Monitor
+
+**Problem statement:** Build a small smart-home system that manages different electrical devices and calculates their energy consumption in kilowatt-hours (kWh).
+
+### OOP Design
+
+- **`SmartDevice`** — Base class that stores device details, protects the power state and calculates energy usage.
+- **`SmartLight`, `SmartFan` and `SmartAirConditioner`** — Child classes that override the device-type method.
+- **`SmartHome`** — Manages device registration, searching, reports and total energy usage.
+
+### Features
+
+1. Register different types of smart devices.
+2. Validate device IDs, names and power ratings.
+3. Prevent duplicate device IDs.
+4. Switch devices on and off using methods.
+5. Keep the power state private and expose it through a read-only property.
+6. Calculate energy usage only while a device is switched on.
+7. Display device details using method overriding and polymorphism.
+8. Calculate total household energy consumption in kWh.
+9. Validate usage hours and demonstrate error handling.
+
+### Concepts Practised
+
+`class`, `object`, `__init__()`, inheritance, `super()` (as a follow-up extension), encapsulation, private attributes, `@property`, method overriding, polymorphism, dictionaries, validation, exception handling and assertions.
+
+### Sample Output
+
+```text
+--- Sakshi's Smart Home: Device Report ---
+L101 | Living Room Light | Smart Light | ON | 0.060 kWh
+F201 | Bedroom Fan | Smart Fan | ON | 0.375 kWh
+AC301 | Hall AC | Smart AC | OFF | 0.000 kWh
+Total energy for 5 hours: 0.435 kWh
+
+Found: Bedroom Fan is ON.
+Duplicate check passed: A device with this ID already exists.
+Hours validation passed: Hours cannot be negative.
+All checks passed successfully.
+```
+
+### Run the Latest Task
+
+Make sure Python 3.9 or later is installed. No external packages are required.
+
+```bash
+python daily_task_2026_11_11.py
+```
+
+On Windows, you can also run:
+
+```bash
+py daily_task_2026_11_11.py
+```
+
+---
+
+## Previous Daily Task — 09 November 2026
 
 ### Parcel Delivery Tracking System
 
@@ -94,7 +154,17 @@ On Windows, you can also run:
 py daily_task_2026_11_09.py
 ```
 
-## Run Automated Tests\n\nThe parcel tracking project includes unit tests using Python's built-in `unittest` framework. From the repository folder, run:\n\n```bash\npython -m unittest -v\n```\n\nThe tests check shipping-cost calculations, invalid weights, delivery-status rules, duplicate tracking IDs and total collection. No third-party testing package is required.\n\n## How to Run Any Exercise
+## Run Automated Tests
+
+The parcel tracking project includes unit tests using Python's built-in `unittest` framework. From the repository folder, run:
+
+```bash
+python -m unittest -v
+```
+
+The tests check shipping-cost calculations, invalid weights, delivery-status rules, duplicate tracking IDs and total collection. No third-party testing package is required.
+
+## How to Run Any Exercise
 
 1. Clone or download this repository.
 2. Open the project folder in VS Code or a terminal.
