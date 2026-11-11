@@ -105,7 +105,7 @@ py daily_task_2026_11_11.py
 ### Features
 
 1. Register regular, express and fragile parcels.
-2. Validate tracking IDs, receiver names and parcel weights.
+2. Validate tracking IDs, receiver names, finite numeric weights and delivery statuses.
 3. Prevent duplicate tracking IDs.
 4. Keep delivery status private and expose it through a read-only property.
 5. Validate delivery status updates and prevent moving to an earlier status.
@@ -157,13 +157,13 @@ py daily_task_2026_11_09.py
 
 ## Run Automated Tests
 
-The parcel tracking project includes unit tests using Python's built-in `unittest` framework. From the repository folder, run:
+The parcel tracking project includes one consolidated test suite using Python's built-in `unittest` framework. From the repository folder, run:
 
 ```bash
 python -m unittest -v
 ```
 
-The tests check shipping-cost calculations, invalid weights, delivery-status rules, duplicate tracking IDs and total collection. No third-party testing package is required.
+The tests check shipping-cost calculations, invalid and non-finite weights, input validation, delivery-status rules, duplicate tracking IDs and total collection. No third-party testing package is required.
 
 ## How to Run Any Exercise
 
