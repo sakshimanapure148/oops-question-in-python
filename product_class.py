@@ -1,5 +1,7 @@
 """Practice: calculate a product's total price."""
 
+import math
+
 
 class Product:
     """Represent a product and its available quantity."""
@@ -7,7 +9,12 @@ class Product:
     def __init__(self, product_name, price, quantity):
         if not isinstance(product_name, str) or not product_name.strip():
             raise ValueError("Product name cannot be empty.")
-        if isinstance(price, bool) or not isinstance(price, (int, float)) or price < 0:
+        if (
+            isinstance(price, bool)
+            or not isinstance(price, (int, float))
+            or not math.isfinite(price)
+            or price < 0
+        ):
             raise ValueError("Price must be a non-negative number.")
         if isinstance(quantity, bool) or not isinstance(quantity, int) or quantity < 0:
             raise ValueError("Quantity must be a non-negative whole number.")
