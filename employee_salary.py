@@ -1,5 +1,7 @@
 """Practice: calculate an employee's annual salary."""
 
+import math
+
 
 class Employee:
     """Store employee details and calculate yearly salary."""
@@ -10,6 +12,7 @@ class Employee:
         if (
             isinstance(monthly_salary, bool)
             or not isinstance(monthly_salary, (int, float))
+            or not math.isfinite(monthly_salary)
             or monthly_salary < 0
         ):
             raise ValueError("Monthly salary must be a non-negative number.")
