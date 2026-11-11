@@ -1,5 +1,7 @@
 """Practice: arithmetic methods inside a Calculator class."""
 
+import math
+
 
 class Calculator:
     """Perform basic arithmetic on two numbers."""
@@ -8,6 +10,8 @@ class Calculator:
         for value in (num1, num2):
             if isinstance(value, bool) or not isinstance(value, (int, float)):
                 raise TypeError("Calculator values must be numbers.")
+            if isinstance(value, float) and not math.isfinite(value):
+                raise ValueError("Calculator values must be finite numbers.")
 
         self.num1 = num1
         self.num2 = num2
