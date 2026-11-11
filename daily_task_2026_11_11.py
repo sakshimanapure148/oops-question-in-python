@@ -1,5 +1,7 @@
 """Daily OOP Task - 11 November 2026: Smart Home Energy Monitor.
 
+import math
+
 Create devices, switch them on or off, and calculate their electricity use.
 This project practises inheritance, encapsulation, polymorphism and validation.
 """
@@ -15,8 +17,8 @@ class SmartDevice:
             raise ValueError("Device name cannot be empty.")
         if not isinstance(power_rating, (int, float)) or isinstance(power_rating, bool):
             raise TypeError("Power rating must be a number.")
-        if power_rating <= 0:
-            raise ValueError("Power rating must be greater than zero.")
+        if not math.isfinite(power_rating) or power_rating <= 0:
+            raise ValueError("Power rating must be a finite number greater than zero.")
 
         self.device_id = device_id.strip().upper()
         self.name = name.strip()
@@ -38,8 +40,8 @@ class SmartDevice:
         """Return energy consumption in kilowatt-hours."""
         if not isinstance(hours, (int, float)) or isinstance(hours, bool):
             raise TypeError("Hours must be a number.")
-        if hours < 0:
-            raise ValueError("Hours cannot be negative.")
+        if not math.isfinite(hours) or hours < 0:
+            raise ValueError("Hours must be finite and cannot be negative.")
         if not self.__is_on:
             return 0.0
         return self.power_rating * hours / 1000
@@ -87,6 +89,8 @@ class SmartHome:
         self._devices[device.device_id] = device
 
     def find_device(self, device_id):
+        if not isinstance(device_id, str) or not device_id.strip():
+            raise ValueError("Device ID must be a non-empty string.")
         return self._devices.get(device_id.strip().upper())
 
     def show_devices(self, hours):
