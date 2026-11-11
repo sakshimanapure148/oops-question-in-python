@@ -1,14 +1,20 @@
 """Daily OOP Task - 09 November 2026: Parcel Delivery Tracking System."""
 
+import math
+
 
 class Parcel:
     STATUSES = ("Booked", "In Transit", "Out for Delivery", "Delivered")
 
     def __init__(self, tracking_id, receiver, weight):
-        if not tracking_id.strip() or not receiver.strip():
-            raise ValueError("Tracking ID and receiver are required.")
-        if weight <= 0:
-            raise ValueError("Weight must be greater than zero.")
+        if not isinstance(tracking_id, str) or not tracking_id.strip():
+            raise ValueError("Tracking ID must be a non-empty string.")
+        if not isinstance(receiver, str) or not receiver.strip():
+            raise ValueError("Receiver must be a non-empty string.")
+        if isinstance(weight, bool) or not isinstance(weight, (int, float)):
+            raise TypeError("Weight must be a number.")
+        if not math.isfinite(weight) or weight <= 0:
+            raise ValueError("Weight must be a finite number greater than zero.")
         self.tracking_id = tracking_id.strip().upper()
         self.receiver = receiver.strip()
         self.weight = weight
@@ -19,7 +25,7 @@ class Parcel:
         return self.__status
 
     def update_status(self, status):
-        if status not in self.STATUSES:
+        if not isinstance(status, str) or status not in self.STATUSES:
             raise ValueError("Invalid delivery status.")
         if self.STATUSES.index(status) < self.STATUSES.index(self.__status):
             raise ValueError("Status cannot move backwards.")
@@ -45,7 +51,9 @@ class FragileParcel(Parcel):
 
 class DeliveryHub:
     def __init__(self, name):
-        self.name = name
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError("Hub name must be a non-empty string.")
+        self.name = name.strip()
         self._parcels = {}
 
     def register(self, parcel):
@@ -57,6 +65,8 @@ class DeliveryHub:
         print(f"{parcel.tracking_id} registered.")
 
     def track(self, tracking_id):
+        if not isinstance(tracking_id, str) or not tracking_id.strip():
+            raise ValueError("Tracking ID must be a non-empty string.")
         parcel = self._parcels.get(tracking_id.strip().upper())
         if parcel is None:
             print("Parcel not found.")
