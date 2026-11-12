@@ -28,9 +28,50 @@ This repository is a daily learning space to practise writing clean, reusable Py
 | `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
 | `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
 | `daily_task_2026_11_11.py` | Smart home energy monitor, inheritance, encapsulation and polymorphism |
+| `daily_task_2026_11_12.py` | Photo album organizer, composition, encapsulation and validation |
 | `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
 
-## Latest Daily Task — 11 November 2026
+## Latest Daily Task — 12 November 2026
+
+### Photo Album Organizer
+
+**Problem statement:** Build a photo gallery that stores photo details, organizes tags, searches an album and calculates total storage.
+
+### OOP Design
+
+- **`Photo`** — Validates photo metadata and manages a private set of tags.
+- **`PhotoAlbum`** — Uses composition to manage Photo objects, search by tag, remove photos and calculate storage.
+
+### Features
+
+1. Register JPG, JPEG, PNG and WEBP photos.
+2. Validate titles, filenames, file sizes and capture dates.
+3. Prevent duplicate filenames (case-insensitive).
+4. Add and remove tags without exposing the private tag set.
+5. Search photos by tag.
+6. Calculate the number of photos and total storage in MB.
+7. Remove a photo safely and verify the result with assertions.
+
+### Concepts Practised
+
+`class`, `object`, constructors, encapsulation, private attributes, `@property`, `@staticmethod`, composition, dictionaries, sets, validation, exception handling and assertions.
+
+### Run the Latest Task
+
+No external packages are required. Use Python 3.9 or later.
+
+```bash
+python daily_task_2026_11_12.py
+```
+
+On Windows:
+
+```bash
+py daily_task_2026_11_12.py
+```
+
+---
+## Previous Daily Task — 11 November 2026
 
 ### Smart Home Energy Monitor
 
