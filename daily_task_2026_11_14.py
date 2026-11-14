@@ -5,6 +5,7 @@ Concepts: encapsulation, composition, properties, validation and date handling.
 """
 
 from datetime import date
+import math
 
 
 class Plant:
@@ -60,8 +61,8 @@ class GardenPlot:
             raise ValueError("Plot ID cannot be empty.")
         if isinstance(area_sq_m, bool) or not isinstance(area_sq_m, (int, float)):
             raise TypeError("Plot area must be a number.")
-        if area_sq_m <= 0:
-            raise ValueError("Plot area must be greater than zero.")
+        if not math.isfinite(area_sq_m) or area_sq_m <= 0:
+            raise ValueError("Plot area must be finite and greater than zero.")
 
         self.plot_id = plot_id.strip().upper()
         self.area_sq_m = float(area_sq_m)
