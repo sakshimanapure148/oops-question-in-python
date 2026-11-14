@@ -28,10 +28,54 @@ This repository is a daily learning space to practise writing clean, reusable Py
 | `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
 | `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
 | `daily_task_2026_11_11.py` | Smart home energy monitor, inheritance, encapsulation and polymorphism |
-| `daily_task_2026_11_12.py` | Photo album organizer, composition, encapsulation and validation |
+| `daily_task_2026_11_12.py` | Photo album organizer, composition, encapsulation and validation |\n| `daily_task_2026_11_14.py` | Community garden manager, composition, encapsulation, properties and validation |
 | `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
 
-## Latest Daily Task — 12 November 2026
+## Latest Daily Task — 14 November 2026
+
+### Community Garden Manager
+
+**Problem statement:** Build a small application to manage community garden plots, register plants, track growing and harvested plants, and produce plot-wise and garden-wide reports.
+
+### OOP Design
+
+- **`Plant`** — Validates plant details, tracks planting dates and protects harvest status.
+- **`GardenPlot`** — Uses composition to manage Plant objects, prevent duplicate IDs and calculate growing/harvested counts.
+- **`GardenManager`** — Manages multiple plots and creates a garden-wide summary.
+
+### Features
+
+1. Register multiple garden plots with validated areas.
+2. Add plants with unique IDs and valid planting dates.
+3. Search for plots and plants using case-insensitive IDs.
+4. Mark a plant as harvested while preventing duplicate harvest actions.
+5. Keep harvest status private and expose it through a read-only property.
+6. Calculate how many days each plant has been growing.
+7. Display plot-wise and garden-wide summaries.
+8. Handle invalid data, missing plants and duplicate IDs.
+9. Verify important behaviour with assertions.
+
+### Concepts Practised
+
+`class`, `object`, constructors, encapsulation, private attributes, `@property`, composition, dictionaries, date handling, validation, exception handling and assertions.
+
+### Run the Latest Task
+
+No external packages are required. Use Python 3.9 or later.
+
+```bash
+python daily_task_2026_11_14.py
+```
+
+On Windows:
+
+```bash
+py daily_task_2026_11_14.py
+```
+
+---
+
+## Previous Daily Task — 12 November 2026
 
 ### Photo Album Organizer
 
