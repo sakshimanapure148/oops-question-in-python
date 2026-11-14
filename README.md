@@ -1,225 +1,265 @@
-# Python OOP Practice
+# Python OOP Practice & Mini-Projects
 
-A growing collection of beginner-friendly Python Object-Oriented Programming exercises and practical mini-projects by **Sakshi Manapure**.
+A structured collection of Python Object-Oriented Programming (OOP) exercises and practical mini-projects by **Sakshi Manapure**.
 
-This repository is a daily learning space to practise writing clean, reusable Python code and understand how OOP concepts are used in real-world applications.
+This repository is designed to build OOP skills step by step—from creating classes and objects to using encapsulation, inheritance, polymorphism, composition, validation, exception handling and automated tests.
 
-## Learning Goals
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)
+[![Learning](https://img.shields.io/badge/Focus-Python%20OOP-green)](#learning-roadmap)
+[![Tests](https://img.shields.io/badge/Tests-unittest-orange)](#automated-tests)
 
-- Understand classes, objects, constructors and instance methods.
-- Practise encapsulation, inheritance and polymorphism.
-- Use properties and validation to protect object data.
-- Build small projects that combine multiple OOP concepts.
-- Improve problem-solving skills through regular coding practice.
+---
 
-## Repository Structure
+## Table of Contents
 
-| File | Project / Concepts |
+- [Repository Overview](#repository-overview)
+- [Getting Started](#getting-started)
+- [Complete File Guide](#complete-file-guide)
+- [Daily OOP Projects](#daily-oop-projects)
+- [Automated Tests](#automated-tests)
+- [OOP Concepts Practised](#oop-concepts-practised)
+- [Suggested Learning Roadmap](#learning-roadmap)
+- [How to Contribute](#how-to-contribute)
+- [About the Author](#about-the-author)
+
+## Repository Overview
+
+| Area | Description |
 |---|---|
-| `opp.py` | OOP fundamentals, inheritance, method overriding and polymorphism |
-| `laptop_class.py` | Classes, objects, constructors and attributes |
-| `calculator_methods.py` | Instance methods and arithmetic operations |
-| `employee_salary.py` | Methods, validation and salary calculations |
-| `product_class.py` | Properties, quantity validation and total price |
-| `event_ticket_booking.py` | Object interaction, booking and cancellation |
-| `course_registration_system.py` | Student and course objects, enrollment and capacity validation |
-| `daily_task_2026_11_03.py` | Playlist manager, encapsulation and duplicate prevention |
-| `daily_task_2026_11_04.py` | Plant-care tracker, properties and date handling |
-| `daily_task_2026_11_08.py` | Photography equipment rental, inheritance and late-fee calculation |
-| `daily_task_2026_11_09.py` | Parcel delivery tracking, inheritance, encapsulation and polymorphism |
-| `daily_task_2026_11_12.py` | Photo album organizer, composition, encapsulation and validation |\n| `daily_task_2026_11_14.py` | Community garden manager, composition, encapsulation, properties and validation |
-| `test_parcel_tracking.py` | Automated unit tests for shipping costs, validation and tracking |
+| Beginner practice | Small, focused exercises for classes, objects, attributes and methods |
+| OOP fundamentals | Inheritance, encapsulation, method overriding and polymorphism |
+| Mini-projects | Practical systems such as booking, registration, tracking and management |
+| Code quality | Input validation, meaningful exceptions and readable structure |
+| Testing | A built-in `unittest` test suite for parcel tracking |
 
-## Latest Daily Task — 14 November 2026
+All projects are written in Python. The repository's examples use Python's standard library; no third-party package is needed for the current exercises.
 
-### Community Garden Manager
+## Getting Started
 
-**Problem statement:** Build a small application to manage community garden plots, register plants, track growing and harvested plants, and produce plot-wise and garden-wide reports.
+### 1. Clone the repository
 
-### OOP Design
+```bash
+git clone https://github.com/sakshimanapure148/oops-question-in-python.git
+cd oops-question-in-python
+```
 
-- **`Plant`** — Validates plant details, tracks planting dates and protects harvest status.
-- **`GardenPlot`** — Uses composition to manage Plant objects, prevent duplicate IDs and calculate growing/harvested counts.
-- **`GardenManager`** — Manages multiple plots and creates a garden-wide summary.
+### 2. Check Python
 
-### Features
+```bash
+python --version
+```
 
-1. Register multiple garden plots with validated areas.
-2. Add plants with unique IDs and valid planting dates.
-3. Search for plots and plants using case-insensitive IDs.
-4. Mark a plant as harvested while preventing duplicate harvest actions.
-5. Keep harvest status private and expose it through a read-only property.
-6. Calculate how many days each plant has been growing.
-7. Display plot-wise and garden-wide summaries.
-8. Handle invalid data, missing plants and duplicate IDs.
-9. Verify important behaviour with assertions.
+On Windows, you can use:
 
-### Concepts Practised
+```bash
+py --version
+```
 
-`class`, `object`, constructors, encapsulation, private attributes, `@property`, composition, dictionaries, date handling, validation, exception handling and assertions.
+Python 3.9 or later is recommended.
 
-### Run the Latest Task
+### 3. Run a Python file
 
-No external packages are required. Use Python 3.9 or later.
+Choose any exercise and run it from the repository folder:
+
+```bash
+python laptop_class.py
+```
+
+On Windows:
+
+```bash
+py laptop_class.py
+```
+
+Replace `laptop_class.py` with the file you want to practise. Each exercise can be run independently unless it is a test file.
+
+## Complete File Guide
+
+The table below documents **every Python file currently in this repository**.
+
+| File | Main classes | What you will practise |
+|---|---|---|
+| [`laptop_class.py`](laptop_class.py) | `Laptop` | Create objects, use a constructor, store attributes and display object details. |
+| [`calculator_methods.py`](calculator_methods.py) | `Calculator` | Write instance methods for addition, subtraction, multiplication and division; validate numeric inputs and handle division by zero. |
+| [`employee_salary.py`](employee_salary.py) | `Employee` | Store employee information, validate salary data and calculate annual salary. |
+| [`product_class.py`](product_class.py) | `Product` | Work with object attributes, validate price and quantity, and calculate a total price. |
+| [`opp.py`](opp.py) | `Vehicle`, `Car`, `Bicycle` | Learn inheritance, `super()`, method overriding and polymorphism through different vehicle types. |
+| [`course_registration_system.py`](course_registration_system.py) | `Student`, `Course` | Connect objects, enrol and remove students, prevent duplicate enrolments and enforce course capacity. |
+| [`event_ticket_booking.py`](event_ticket_booking.py) | `Event`, `TicketBooking` | Model event bookings, calculate totals and discounts, cancel bookings and restore ticket availability. Uses `Decimal` for ticket-price calculations. |
+| [`daily_task_2026_11_03.py`](daily_task_2026_11_03.py) | `Track`, `Playlist` | Build a playlist, add and remove tracks, prevent duplicates and calculate total duration. |
+| [`daily_task_2026_11_04.py`](daily_task_2026_11_04.py) | `Plant`, `PlantCareTracker` | Track watering records, use read-only properties, validate dates and display plant-care reminders. |
+| [`daily_task_2026_11_08.py`](daily_task_2026_11_08.py) | `Equipment`, `Camera`, `Tripod`, `RentalDesk` | Practise inheritance and method overriding while managing equipment rentals, due dates and late-return charges. |
+| [`daily_task_2026_11_09.py`](daily_task_2026_11_09.py) | `Parcel`, `ExpressParcel`, `FragileParcel`, `DeliveryHub` | Manage parcel registration and delivery status; calculate different shipping charges using inheritance and polymorphism. |
+| [`daily_task_2026_11_12.py`](daily_task_2026_11_12.py) | `Photo`, `PhotoAlbum` | Organize photo records, manage private tags, search by tag, validate file formats and calculate storage. |
+| [`daily_task_2026_11_14.py`](daily_task_2026_11_14.py) | `Plant`, `GardenPlot`, `GardenManager` | Use composition to manage garden plots and plants, track harvests, validate records and generate summaries. |
+| [`test_parcel_tracking.py`](test_parcel_tracking.py) | `ParcelTests` | Run automated tests for parcel shipping costs, validation, delivery-status rules, duplicate IDs and collection totals. |
+
+## Daily OOP Projects
+
+### 14 November 2026 — Community Garden Manager
+
+**File:** [`daily_task_2026_11_14.py`](daily_task_2026_11_14.py)
+
+Manage a community garden containing multiple plots and plants.
+
+- `Plant` stores plant details, planting date and private harvest status.
+- `GardenPlot` manages plant objects, prevents duplicate plant IDs and calculates growing/harvested totals.
+- `GardenManager` manages multiple plots and prints a garden-wide report.
+
+**Key concepts:** composition, encapsulation, read-only properties, dictionaries, date handling, validation and exception handling.
+
+Run it:
 
 ```bash
 python daily_task_2026_11_14.py
 ```
 
-On Windows:
+### 12 November 2026 — Photo Album Organizer
 
-```bash
-py daily_task_2026_11_14.py
-```
+**File:** [`daily_task_2026_11_12.py`](daily_task_2026_11_12.py)
 
----
+Organize photos into an album, manage tags, search by tag and calculate storage use.
 
-## Previous Daily Task — 12 November 2026
+**Key concepts:** composition, encapsulation, private attributes, properties, static methods, sets, validation and assertions.
 
-### Photo Album Organizer
-
-**Problem statement:** Build a photo gallery that stores photo details, organizes tags, searches an album and calculates total storage.
-
-### OOP Design
-
-- **`Photo`** — Validates photo metadata and manages a private set of tags.
-- **`PhotoAlbum`** — Uses composition to manage Photo objects, search by tag, remove photos and calculate storage.
-
-### Features
-
-1. Register JPG, JPEG, PNG and WEBP photos.
-2. Validate titles, filenames, file sizes and capture dates.
-3. Prevent duplicate filenames (case-insensitive).
-4. Add and remove tags without exposing the private tag set.
-5. Search photos by tag.
-6. Calculate the number of photos and total storage in MB.
-7. Remove a photo safely and verify the result with assertions.
-
-### Concepts Practised
-
-`class`, `object`, constructors, encapsulation, private attributes, `@property`, `@staticmethod`, composition, dictionaries, sets, validation, exception handling and assertions.
-
-### Run the Latest Task
-
-No external packages are required. Use Python 3.9 or later.
+Run it:
 
 ```bash
 python daily_task_2026_11_12.py
 ```
 
-On Windows:
+### 9 November 2026 — Parcel Delivery Tracking System
 
-```bash
-py daily_task_2026_11_12.py
-```
+**File:** [`daily_task_2026_11_09.py`](daily_task_2026_11_09.py)
 
----
-## Previous Daily Task — 09 November 2026
+Register and track regular, express and fragile parcels, update delivery progress and calculate shipping charges.
 
-### Parcel Delivery Tracking System
+**Key concepts:** inheritance, `super()`, encapsulation, properties, method overriding, polymorphism and validation.
 
-**Problem statement:** Create a parcel tracking application that registers different parcel types, tracks delivery progress and calculates shipping charges.
-
-### OOP Design
-
-- **`Parcel`** — Base class containing the tracking ID, receiver, weight and private delivery status.
-- **`ExpressParcel`** — Child class that overrides the shipping-cost method to include an express surcharge.
-- **`FragileParcel`** — Child class that overrides the shipping-cost method to include a special-handling surcharge.
-- **`DeliveryHub`** — Manages parcel registration, tracking and the total shipping collection.
-
-### Features
-
-1. Register regular, express and fragile parcels.
-2. Validate tracking IDs, receiver names, finite numeric weights and delivery statuses.
-3. Prevent duplicate tracking IDs.
-4. Keep delivery status private and expose it through a read-only property.
-5. Validate delivery status updates and prevent moving to an earlier status.
-6. Find and display parcel details using a tracking ID.
-7. Calculate different shipping charges through method overriding.
-8. Calculate the total shipping collection.
-9. Verify important results with assertions.
-
-### Concepts Practised
-
-`class`, `object`, `__init__()`, inheritance, `super()`, encapsulation, private attributes, `@property`, method overriding, polymorphism, dictionaries, exception handling and assertions.
-
-### Sample Output
-
-```text
-NGP101 registered.
-NGP102 registered.
-NGP103 registered.
-
---- Nagpur Central Hub: Parcel List ---
-NGP101 | Aarav | 2.5 kg
-Status: Booked | Shipping: Rs. 90.00
------------------------------------
-NGP102 | Meera | 1.2 kg
-Status: Booked | Shipping: Rs. 139.00
------------------------------------
-NGP103 | Kabir | 3.0 kg
-Status: Booked | Shipping: Rs. 150.00
------------------------------------
-
-Updated status: Out for Delivery
-Total shipping collection: Rs. 379.00
-All checks passed successfully.
-```
-
-### Run the Latest Task
-
-Make sure Python 3.9 or later is installed. No external packages are required.
+Run it:
 
 ```bash
 python daily_task_2026_11_09.py
 ```
 
-On Windows, you can also run:
+### 8 November 2026 — Photography Equipment Rental Tracker
+
+**File:** [`daily_task_2026_11_08.py`](daily_task_2026_11_08.py)
+
+Manage camera and tripod inventory, process rentals and returns, and calculate late fees.
+
+**Key concepts:** inheritance, method overriding, encapsulation, date calculations and object management.
+
+Run it:
 
 ```bash
-py daily_task_2026_11_09.py
+python daily_task_2026_11_08.py
 ```
 
-## Run Automated Tests
+### 4 November 2026 — Smart Plant Care Tracker
 
-The parcel tracking project includes one consolidated test suite using Python's built-in `unittest` framework. From the repository folder, run:
+**File:** [`daily_task_2026_11_04.py`](daily_task_2026_11_04.py)
+
+Register plants, record watering dates and calculate when a plant needs attention.
+
+**Key concepts:** encapsulation, properties, date validation, methods and object interaction.
+
+Run it:
+
+```bash
+python daily_task_2026_11_04.py
+```
+
+### 3 November 2026 — Music Playlist Manager
+
+**File:** [`daily_task_2026_11_03.py`](daily_task_2026_11_03.py)
+
+Create a playlist, add or remove tracks, prevent duplicate entries and calculate the playlist duration.
+
+**Key concepts:** classes, objects, encapsulation, lists, validation and object interaction.
+
+Run it:
+
+```bash
+python daily_task_2026_11_03.py
+```
+
+## Automated Tests
+
+The parcel tracking project includes a test suite built with Python's standard `unittest` module.
+
+Run all available tests from the repository folder:
 
 ```bash
 python -m unittest -v
 ```
 
-The tests check shipping-cost calculations, invalid and non-finite weights, input validation, delivery-status rules, duplicate tracking IDs and total collection. No third-party testing package is required.
+On Windows:
 
-## How to Run Any Exercise
+```bash
+py -m unittest -v
+```
 
-1. Clone or download this repository.
-2. Open the project folder in VS Code or a terminal.
-3. Choose the Python file you want to practise.
-4. Run it using `python filename.py` or `py filename.py` on Windows.
+The current test file checks:
 
-## OOP Topics Covered in This Repository
+- Regular, express and fragile parcel shipping-cost calculations.
+- Rejection of invalid parcel weight.
+- Prevention of delivery-status changes that move backwards.
+- Duplicate tracking-ID validation.
+- Total shipping collection.
 
-- Classes, objects, attributes and methods
-- Constructors and the `self` keyword
-- Encapsulation and private attributes
-- Inheritance and `super()`
-- Method overriding and polymorphism
-- Properties and data validation
-- Object interaction and composition
-- Dictionaries for managing objects
-- Exception handling and assertions
-- Date handling and calculations
+The tests import the parcel classes from `daily_task_2026_11_09.py`. If you add new features, consider adding matching tests to keep behaviour reliable.
 
-## Ideas for Further Practice
+## OOP Concepts Practised
 
-- Add a new parcel type with its own shipping rule.
-- Add a method to list only parcels that are still in transit.
-- Add a delivery hub feature to mark parcels as delivered.
-- Write additional tests for invalid input and duplicate IDs.
-- Extend an existing mini-project with another OOP concept.
+| Concept | Meaning in this repository |
+|---|---|
+| Class and object | Create reusable blueprints and individual instances. |
+| Constructor | Initialize object data using `__init__()`. |
+| Instance method | Define behaviour that works with object data. |
+| Encapsulation | Keep internal state private and control how it changes. |
+| Inheritance | Reuse and extend behaviour from a parent class. |
+| `super()` | Call parent-class behaviour from a child class. |
+| Method overriding | Give a child class its own implementation of a method. |
+| Polymorphism | Use a common method call with different object behaviours. |
+| Composition | Build a larger object by managing other objects. |
+| Property | Provide controlled, readable access to object data. |
+| Validation | Reject invalid values before they enter an object. |
+| Exception handling | Handle invalid operations with clear errors. |
+| Unit testing | Check expected behaviour with repeatable tests. |
 
-## Author
+## Suggested Learning Roadmap
 
-**Sakshi Manapure**
+1. Start with `laptop_class.py` to understand classes, objects and constructors.
+2. Practise methods and calculations with `calculator_methods.py`, `employee_salary.py` and `product_class.py`.
+3. Learn inheritance and polymorphism with `opp.py`.
+4. Practise object interaction with `course_registration_system.py` and `event_ticket_booking.py`.
+5. Explore encapsulation and composition in the daily mini-projects.
+6. Run `test_parcel_tracking.py` through the `unittest` command and try writing additional tests.
 
-[GitHub Profile](https://github.com/sakshimanapure148)
+Try to understand the logic, modify the sample values, and add one small feature after completing each exercise.
+
+## How to Contribute
+
+This is a learning repository. To add a new exercise:
+
+1. Create a separate, clearly named `.py` file.
+2. Give classes and methods meaningful names.
+3. Add input validation and handle expected errors.
+4. Include a small example under `if __name__ == "__main__":`.
+5. Update this README with the new file, its purpose, concepts and run command.
+6. Add tests when the project has behaviour that should be checked automatically.
+
+Keep each exercise focused and avoid mixing unrelated tasks into an existing file.
+
+## About the Author
+
+**Sakshi Manapure**  
+Python Full Stack Developer — Learning and building with Python, Django, JavaScript and SQL.
+
+- GitHub: [@sakshimanapure148](https://github.com/sakshimanapure148)
+- Repository: [oops-question-in-python](https://github.com/sakshimanapure148/oops-question-in-python)
+
+---
+
+*Learning OOP one class, one object and one project at a time.*
