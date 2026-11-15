@@ -1,10 +1,10 @@
-"""Smart Home Energy Monitor
-=========================
+"""Smart Home Energy Monitor and Word Puzzle Game
+=================================================
 
 Daily OOP practice project — 15 November 2026.
 
 Demonstrates inheritance, encapsulation, polymorphism, composition,
-input validation and basic runtime assertions.
+input validation, runtime assertions and an interactive word puzzle.
 """
 
 from __future__ import annotations
@@ -187,6 +187,92 @@ class SmartHome:
         print(f"Total estimate: {total_kwh:.3f} kWh")
         print("=" * 72)
         return total_kwh
+
+
+class WordPuzzleGame:
+    """Interactive word-scramble game demonstrating OOP fundamentals."""
+
+    PUZZLES = (
+        {"word": "PYTHON", "hint": "A popular programming language."},
+        {"word": "OBJECT", "hint": "An instance created from a class."},
+        {"word": "METHOD", "hint": "A function defined inside a class."},
+        {"word": "INHERITANCE", "hint": "An OOP feature for reusing parent-class behaviour."},
+        {"word": "POLYMORPHISM", "hint": "One interface, many forms."},
+    )
+
+    def __init__(self) -> None:
+        self.__score = 0
+        self.__rounds_played = 0
+
+    @property
+    def score(self) -> int:
+        """Return the player's current score."""
+        return self.__score
+
+    @staticmethod
+    def scramble_word(word: str) -> str:
+        """Return a shuffled version of a word."""
+        import random
+
+        letters = list(word)
+        # Avoid showing the original word when a shuffle happens to match it.
+        for _ in range(10):
+            random.shuffle(letters)
+            scrambled = "".join(letters)
+            if scrambled != word:
+                return scrambled
+        return word[::-1]
+
+    def play_round(self, puzzle: dict) -> bool:
+        """Run one puzzle round; return True when the answer is correct."""
+        answer = puzzle["word"]
+        scrambled = self.scramble_word(answer)
+
+        print("\\n" + "-" * 48)
+        print("WORD PUZZLE CHALLENGE")
+        print(f"Unscramble this word: {scrambled}")
+        print(f"Hint: {puzzle['hint']}")
+        print("Type 'hint' to see the hint again or 'quit' to exit.")
+
+        while True:
+            guess = input("Your answer: ").strip().upper()
+
+            if guess == "QUIT":
+                return False
+            if guess == "HINT":
+                print(f"Hint: {puzzle['hint']}")
+                continue
+            if not guess:
+                print("Please enter an answer.")
+                continue
+            if guess == answer:
+                self.__score += 10
+                self.__rounds_played += 1
+                print("Correct! You earned 10 points.")
+                return True
+
+            print("Not quite. Try again!")
+
+    def start(self) -> None:
+        """Play each puzzle and display the final score."""
+        import random
+
+        puzzles = list(self.PUZZLES)
+        random.shuffle(puzzles)
+
+        print("\\n===== PYTHON OOP WORD PUZZLE GAME =====")
+        print("Solve the scrambled words and earn 10 points per answer.")
+
+        for puzzle in puzzles:
+            if not self.play_round(puzzle):
+                print("Game ended by player.")
+                break
+
+        print("\\n===== GAME SUMMARY =====")
+        print(f"Rounds solved: {self.__rounds_played}")
+        print(f"Final score: {self.score}/{len(self.PUZZLES) * 10}")
+        print("Thanks for playing!")
+
 
 
 def main() -> None:
