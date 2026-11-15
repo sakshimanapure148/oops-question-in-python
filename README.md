@@ -92,6 +92,7 @@ The table below documents **every Python file currently in this repository**.
 | [`daily_task_2026_11_09.py`](daily_task_2026_11_09.py) | `Parcel`, `ExpressParcel`, `FragileParcel`, `DeliveryHub` | Manage parcel registration and delivery status; calculate different shipping charges using inheritance and polymorphism. |
 | [`daily_task_2026_11_12.py`](daily_task_2026_11_12.py) | `Photo`, `PhotoAlbum` | Organize photo records, manage private tags, search by tag, validate file formats and calculate storage. |
 | [`daily_task_2026_11_14.py`](daily_task_2026_11_14.py) | `Plant`, `GardenPlot`, `GardenManager` | Use composition to manage garden plots and plants, track harvests, validate records and generate summaries. |
+| [`daily_task_2026_11_15.py`](daily_task_2026_11_15.py) | `SmartDevice`, `SmartLight`, `SmartFan`, `SmartHome` | Control smart devices, validate settings and estimate energy use with inheritance, polymorphism and composition. |
 | [`test_parcel_tracking.py`](test_parcel_tracking.py) | `ParcelTests` | Run automated tests for parcel shipping costs, validation, delivery-status rules, duplicate IDs and collection totals. |
 
 ## Daily OOP Projects
@@ -99,17 +100,37 @@ The table below documents **every Python file currently in this repository**.
 
 ### 15 November 2026 — Smart Home Energy Monitor
 
+<badge color="success">Latest daily task</badge>
+
 **File:** [`daily_task_2026_11_15.py`](daily_task_2026_11_15.py)
 
-Register smart lights and fans, switch devices on or off, adjust brightness or fan speed, and estimate energy consumption in kWh.
+Build a small smart-home system that registers devices, controls their power state and estimates their energy consumption.
 
-**Key concepts:** inheritance, method overriding, polymorphism, encapsulation, composition, properties, validation and assertions.
+**What the program does**
 
-Run it:
+- Registers smart lights and fans with unique device IDs.
+- Switches registered devices on and off.
+- Changes light brightness (1–100%) and fan speed (1–3).
+- Displays device details and the number of active devices.
+- Estimates energy usage in kilowatt-hours (kWh) for a selected number of hours.
+- Checks duplicate IDs, invalid settings and unknown devices.
+
+**OOP concepts practised**
+
+- **Inheritance:** `SmartLight` and `SmartFan` extend the `SmartDevice` base class.
+- **Encapsulation:** internal power state, brightness, speed and device collection are protected.
+- **Polymorphism and overriding:** each device type calculates energy use according to its settings.
+- **Composition:** `SmartHome` manages multiple smart-device objects.
+- **Properties and validation:** controlled access to device state and checks for invalid input.
+- **Assertions and exceptions:** verify expected totals and handle invalid operations.
+
+**Run the program**
 
 ```bash
 python daily_task_2026_11_15.py
 ```
+
+The energy figures are estimates based on each device's rated wattage and configured settings; they are not readings from a physical electricity meter. The example also includes assertions that check the expected totals for its sample devices.
 
 ### 14 November 2026 — Community Garden Manager
 
