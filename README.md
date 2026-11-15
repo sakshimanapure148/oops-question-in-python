@@ -96,6 +96,21 @@ The table below documents **every Python file currently in this repository**.
 
 ## Daily OOP Projects
 
+
+### 15 November 2026 — Smart Home Energy Monitor
+
+**File:** [`daily_task_2026_11_15.py`](daily_task_2026_11_15.py)
+
+Register smart lights and fans, switch devices on or off, adjust brightness or fan speed, and estimate energy consumption in kWh.
+
+**Key concepts:** inheritance, method overriding, polymorphism, encapsulation, composition, properties, validation and assertions.
+
+Run it:
+
+```bash
+python daily_task_2026_11_15.py
+```
+
 ### 14 November 2026 — Community Garden Manager
 
 **File:** [`daily_task_2026_11_14.py`](daily_task_2026_11_14.py)
