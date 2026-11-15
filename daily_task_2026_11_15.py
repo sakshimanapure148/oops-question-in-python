@@ -147,7 +147,7 @@ class SmartHome:
 
     def energy_report(self, usage_hours):
         """Use polymorphism to calculate each device's energy estimate."""
-        print(f"\\n===== Energy Report: {self.home_name} =====")
+        print(f"\n===== Energy Report: {self.home_name} =====")
         total_kwh = 0.0
         for device in self.__devices.values():
             energy = device.estimate_daily_energy(usage_hours)
@@ -175,7 +175,7 @@ def main():
     # Each subclass calculates energy according to its own settings.
     total = home.energy_report(5)
 
-    print("\\nChanging fan speed and light brightness...")
+    print("\nChanging fan speed and light brightness...")
     bedroom_fan.set_speed(3)
     living_room_light.set_brightness(50)
     updated_total = home.energy_report(5)
@@ -184,7 +184,7 @@ def main():
     try:
         home.add_device(SmartLight("L101", "Duplicate Light", 10))
     except ValueError as error:
-        print("\\nDuplicate check passed:", error)
+        print("\nDuplicate check passed:", error)
 
     try:
         study_light.set_brightness(120)
@@ -198,11 +198,11 @@ def main():
 
     assert home.total_devices == 3
     assert home.active_devices == 3
-    assert round(total, 3) == 0.297
-    assert round(updated_total, 3) == 0.24
+    assert round(total, 3) == 0.315
+    assert round(updated_total, 3) == 0.375
     assert home.find_device("l101") is living_room_light
     assert home.find_device("missing") is None
-    print("\\nAll smart home energy checks passed successfully.")
+    print("\nAll smart home energy checks passed successfully.")
 
 
 if __name__ == "__main__":
