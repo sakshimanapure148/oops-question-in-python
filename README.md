@@ -92,7 +92,7 @@ The table below documents **every Python file currently in this repository**.
 | [`daily_task_2026_11_09.py`](daily_task_2026_11_09.py) | `Parcel`, `ExpressParcel`, `FragileParcel`, `DeliveryHub` | Manage parcel registration and delivery status; calculate different shipping charges using inheritance and polymorphism. |
 | [`daily_task_2026_11_12.py`](daily_task_2026_11_12.py) | `Photo`, `PhotoAlbum` | Organize photo records, manage private tags, search by tag, validate file formats and calculate storage. |
 | [`daily_task_2026_11_14.py`](daily_task_2026_11_14.py) | `Plant`, `GardenPlot`, `GardenManager` | Use composition to manage garden plots and plants, track harvests, validate records and generate summaries. |
-| [`daily_task_2026_11_15.py`](daily_task_2026_11_15.py) | `SmartDevice`, `SmartLight`, `SmartFan`, `SmartHome` | Control smart devices, validate settings and estimate energy use with inheritance, polymorphism and composition. |
+| [`daily_task_2026_11_15.py`](daily_task_2026_11_15.py) | `SmartDevice`, `SmartLight`, `SmartFan`, `SmartHome` | Control smart devices, validate settings and estimate energy use with inheritance, polymorphism and composition. |\n| [`daily_task_2026_11_19.py`](daily_task_2026_11_19.py) | `TravelPackage`, `PremiumPackage`, `TravelBooking`, `TravelAgency` | Manage travel packages and bookings, calculate group totals, cancel bookings and validate records using inheritance and composition. |
 | [`test_parcel_tracking.py`](test_parcel_tracking.py) | `ParcelTests` | Run automated tests for parcel shipping costs, validation, delivery-status rules, duplicate IDs and collection totals. |
 
 ## Daily OOP Projects
