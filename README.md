@@ -98,6 +98,26 @@ The table below documents **every Python file currently in this repository**.
 ## Daily OOP Projects
 
 
+### Tours and Travels Management System
+
+**File:** [`tours_and_travels.py`](tours_and_travels.py)
+
+Manage tour packages and customer bookings through a simple travel agency program.
+
+- Add standard and premium tour packages.
+- Display destinations, trip duration and per-person prices.
+- Calculate costs for multiple travellers.
+- Create and cancel customer bookings.
+- Validate package IDs, booking IDs, traveller counts and prices.
+
+**Key concepts:** classes, objects, inheritance, encapsulation, polymorphism, composition, properties, validation and exception handling.
+
+Run it:
+
+```bash
+python tours_and_travels.py
+```
+
 ### 15 November 2026 — Smart Home Energy Monitor
 
 <badge color="success">Latest daily task</badge>
