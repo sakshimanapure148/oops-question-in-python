@@ -93,9 +93,41 @@ The table below documents **every Python file currently in this repository**.
 | [`daily_task_2026_11_12.py`](daily_task_2026_11_12.py) | `Photo`, `PhotoAlbum` | Organize photo records, manage private tags, search by tag, validate file formats and calculate storage. |
 | [`daily_task_2026_11_14.py`](daily_task_2026_11_14.py) | `Plant`, `GardenPlot`, `GardenManager` | Use composition to manage garden plots and plants, track harvests, validate records and generate summaries. |
 | [`daily_task_2026_11_15.py`](daily_task_2026_11_15.py) | `SmartDevice`, `SmartLight`, `SmartFan`, `SmartHome` | Control smart devices, validate settings and estimate energy use with inheritance, polymorphism and composition. |\n| [`daily_task_2026_11_19.py`](daily_task_2026_11_19.py) | `TravelPackage`, `PremiumPackage`, `TravelBooking`, `TravelAgency` | Manage travel packages and bookings, calculate group totals, cancel bookings and validate records using inheritance and composition. |
+| [`daily_task_2026_11_22.py`](daily_task_2026_11_22.py) | `PhotoEntry`, `Participant`, `PhotographyContest` | Organize a photography contest, validate submissions and scores, calculate participant averages and display a leaderboard. |
 | [`test_parcel_tracking.py`](test_parcel_tracking.py) | `ParcelTests` | Run automated tests for parcel shipping costs, validation, delivery-status rules, duplicate IDs and collection totals. |
 
 ## Daily OOP Projects
+
+### 22 November 2026 — Photography Contest Manager
+
+**File:** [`daily_task_2026_11_22.py`](daily_task_2026_11_22.py)
+
+Build a small contest manager that registers participants, accepts photo entries, validates scores and ranks participants by their average score.
+
+**What the program does**
+
+- Registers participants using unique participant IDs.
+- Accepts photo entries with unique entry IDs, titles and categories.
+- Validates scores between 0 and 100.
+- Calculates each participant's average score.
+- Displays a leaderboard with ranking and entry count.
+- Handles invalid names, duplicate IDs, unknown participants and invalid scores.
+
+**OOP concepts practised**
+
+- **Classes and objects:** model participants, photo entries and the contest.
+- **Encapsulation:** keep each participant's entry collection internal and expose a read-only snapshot.
+- **Composition:** the contest manages participant objects, and each participant manages photo entries.
+- **Validation:** check identifiers, text fields and numeric scores.
+- **Sorting and aggregation:** calculate averages and create a leaderboard.
+
+**Run the program**
+
+```bash
+python daily_task_2026_11_22.py
+```
+
+
 
 
 ### Tours and Travels Management System
