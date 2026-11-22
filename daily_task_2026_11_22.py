@@ -6,7 +6,7 @@ Run:
 """
 
 from dataclasses import dataclass
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 @dataclass
@@ -107,6 +107,52 @@ class PhotographyContest:
             raise ValueError("Entry IDs must be unique across the contest.")
         self._participants[key].submit_photo(entry)
 
+    def find_participant(self, participant_id: str) -> Optional[Participant]:
+        """Find a participant using their ID; return None if not found."""
+        return self._participants.get(participant_id.strip().upper())
+
+    def category_winners(self) -> Dict[str, tuple]:
+        """Return the highest-scoring photo and its owner in each category."""
+        winners = {}
+        for participant in self._participants.values():
+            for entry in participant.entries:
+                current = winners.get(entry.category)
+                if current is None or entry.score > current[1].score:
+                    winners[entry.category] = (participant, entry)
+        return winners
+
+    def display_category_winners(self) -> None:
+        print("\n===== Category Winners =====")
+        winners = self.category_winners()
+        if not winners:
+            print("No photo entries have been submitted.")
+            return
+
+        for category, (participant, entry) in sorted(winners.items()):
+            print(
+                f"{category}: {entry.title} — {participant.name} "
+                f"({entry.score:.1f}/100)"
+            )
+
+    def display_participant_report(self, participant_id: str) -> None:
+        """Display all submitted photos for one participant."""
+        participant = self.find_participant(participant_id)
+        if participant is None:
+            print("Participant not found.")
+            return
+
+        print(f"\n===== Report: {participant.name} =====")
+        if not participant.entries:
+            print("No photos submitted yet.")
+            return
+
+        for entry in participant.entries:
+            print(
+                f"{entry.entry_id} | {entry.title} | "
+                f"{entry.category} | {entry.score:.1f}/100"
+            )
+        print(f"Average score: {participant.average_score():.1f}/100")
+
     def leaderboard(self) -> List[Participant]:
         """Return participants ordered by average score, highest first."""
         return sorted(
@@ -132,11 +178,13 @@ class PhotographyContest:
 def main() -> None:
     contest = PhotographyContest("Lens & Light Photography Challenge")
 
-    sakshi = Participant("P101", "Sakshi Manapure")
-    aarav = Participant("P102", "Aarav Sharma")
-    riya = Participant("P103", "Riya Patil")
+    participants = [
+        Participant("P101", "Sakshi Manapure"),
+        Participant("P102", "Aarav Sharma"),
+        Participant("P103", "Riya Patil"),
+    ]
 
-    for participant in (sakshi, aarav, riya):
+    for participant in participants:
         contest.register_participant(participant)
 
     contest.submit_entry("P101", PhotoEntry("E101", "Monsoon Streets", "Street", 92))
@@ -146,6 +194,8 @@ def main() -> None:
     contest.submit_entry("P103", PhotoEntry("E105", "Old Windows", "Architecture", 90))
 
     contest.display_results()
+    contest.display_category_winners()
+    contest.display_participant_report("P101")
 
 
 if __name__ == "__main__":
