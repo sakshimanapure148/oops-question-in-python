@@ -98,6 +98,28 @@ The table below documents **every Python file currently in this repository**.
 
 ## Daily OOP Projects
 
+### 24 November 2026 — Art Workshop Registration Manager
+
+**File:** [`daily_task_2026_11_24.py`](daily_task_2026_11_24.py)
+
+Manage online and in-person art workshops, register participants and track enrolments.
+
+- Creates online and in-person workshops with different additional fees.
+- Registers participants after validating their details.
+- Enrols participants while checking available seats and duplicate registrations.
+- Calculates fees through method overriding (polymorphism).
+- Cancels registrations and restores workshop capacity.
+- Displays workshop availability and a registration report.
+
+**OOP concepts:** inheritance, encapsulation, polymorphism, composition, validation and exception handling.
+
+Run it:
+
+```bash
+python daily_task_2026_11_24.py
+```
+
+
 ### 22 November 2026 — Photography Contest Manager
 
 **File:** [`daily_task_2026_11_22.py`](daily_task_2026_11_22.py)
