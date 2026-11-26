@@ -3,7 +3,7 @@ OOP practice: inheritance, encapsulation, polymorphism, composition,
 validation, Decimal calculations and exception handling.
 
 Run:
-    python daily_task_2026_11_24.py
+    python art_workshop_registration_manager.py
 """
 
 from decimal import Decimal, InvalidOperation
