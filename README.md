@@ -36,13 +36,13 @@ On Windows, `py --version` can be used. Python 3.9 or later is recommended.
 Run an exercise:
 
 ```bash
-python task_13.py
+python study_session_planner.py
 ```
 
 On Windows:
 
 ```bash
-py task_13.py
+py study_session_planner.py
 ```
 
 Replace the filename with any exercise from the file guide below.
@@ -51,31 +51,31 @@ Replace the filename with any exercise from the file guide below.
 
 | File | Main classes | What you will practise |
 |---|---|---|
-| [`task_16.py`](task_16.py) | `Laptop` | Classes, objects, constructors and object attributes. |
-| [`task_1.py`](task_1.py) | `Calculator` | Instance methods, arithmetic, validation and division-by-zero handling. |
-| [`task_14.py`](task_14.py) | `Employee` | Employee details, salary validation and annual salary calculation. |
-| [`task_18.py`](task_18.py) | `Product` | Attributes, price and quantity validation, and total-price calculation. |
-| [`task_17.py`](task_17.py) | `Vehicle` and child classes | Inheritance, `super()`, method overriding and polymorphism. |
-| [`task_2.py`](task_2.py) | `Student`, `Course` | Object interaction, enrolment, duplicate prevention and capacity validation. |
-| [`task_15.py`](task_15.py) | `Event`, `TicketBooking` | Ticket booking, availability, total-price calculation and cancellation. |
-| [`task_3.py`](task_3.py) | `Track`, `Playlist` | Playlist management, adding/removing tracks and duration calculation. |
-| [`task_4.py`](task_4.py) | `Plant`, `PlantCareTracker` | Watering records, date validation and care reminders. |
-| [`task_5.py`](task_5.py) | `Equipment`, `Camera`, `Tripod`, `RentalDesk` | Equipment rental, returns, composition and late fees. |
-| [`task_6.py`](task_6.py) | `Parcel`, `ExpressParcel`, `FragileParcel`, `DeliveryHub` | Parcel tracking, shipping charges and polymorphism. |
-| [`task_7.py`](task_7.py) | `Photo`, `PhotoAlbum` | Photo organization, tags, searching, formats and storage calculations. |
-| [`task_8.py`](task_8.py) | `Plant`, `GardenPlot`, `GardenManager` | Garden management, composition and harvest tracking. |
-| [`task_9.py`](task_9.py) | `SmartDevice`, `SmartLight`, `SmartFan`, `SmartHome`, `WordPuzzleGame` | Smart-device controls, energy estimates and an interactive word puzzle. |
-| [`task_10.py`](task_10.py) | `MediaAsset`, `Photo`, `Video`, `PhotoAlbum`, `PortfolioLibrary` | Abstract classes, inheritance, composition, searching and sorting. |
-| [`task_11.py`](task_11.py) | `PhotoEntry`, `Participant`, `PhotographyContest` | Photo submissions, score validation, category winners and leaderboard. |
-| [`task_12.py`](task_12.py) | `Workshop`, `OnlineWorkshop`, `InPersonWorkshop`, `Participant`, `Registration`, `WorkshopManager` | Workshop registration, capacity, fee calculation and cancellation. |
-| [`task_13.py`](task_13.py) | `StudyTopic`, `StudySession`, `StudyPlanner` | Study scheduling, time-conflict detection, session status and progress reports. |
-| [`task_19.py`](task_19.py) | `ParcelTests` | Unit tests for parcel charges, validation, delivery status and duplicate IDs. |
+| [`laptop_class.py`](laptop_class.py) | `Laptop` | Classes, objects, constructors and object attributes. |
+| [`calculator.py`](calculator.py) | `Calculator` | Instance methods, arithmetic, validation and division-by-zero handling. |
+| [`employee_annual_salary_calculator.py`](employee_annual_salary_calculator.py) | `Employee` | Employee details, salary validation and annual salary calculation. |
+| [`product_price_calculator.py`](product_price_calculator.py) | `Product` | Attributes, price and quantity validation, and total-price calculation. |
+| [`vehicle_inheritance_polymorphism.py`](vehicle_inheritance_polymorphism.py) | `Vehicle` and child classes | Inheritance, `super()`, method overriding and polymorphism. |
+| [`course_registration_system.py`](course_registration_system.py) | `Student`, `Course` | Object interaction, enrolment, duplicate prevention and capacity validation. |
+| [`event_ticket_booking_system.py`](event_ticket_booking_system.py) | `Event`, `TicketBooking` | Ticket booking, availability, total-price calculation and cancellation. |
+| [`music_playlist_manager.py`](music_playlist_manager.py) | `Track`, `Playlist` | Playlist management, adding/removing tracks and duration calculation. |
+| [`smart_plant_care_tracker.py`](smart_plant_care_tracker.py) | `Plant`, `PlantCareTracker` | Watering records, date validation and care reminders. |
+| [`photography_equipment_rental_tracker.py`](photography_equipment_rental_tracker.py) | `Equipment`, `Camera`, `Tripod`, `RentalDesk` | Equipment rental, returns, composition and late fees. |
+| [`parcel_delivery_tracking_system.py`](parcel_delivery_tracking_system.py) | `Parcel`, `ExpressParcel`, `FragileParcel`, `DeliveryHub` | Parcel tracking, shipping charges and polymorphism. |
+| [`photo_album_organizer.py`](photo_album_organizer.py) | `Photo`, `PhotoAlbum` | Photo organization, tags, searching, formats and storage calculations. |
+| [`community_garden_manager.py`](community_garden_manager.py) | `Plant`, `GardenPlot`, `GardenManager` | Garden management, composition and harvest tracking. |
+| [`smart_home_energy_monitor_word_puzzle.py`](smart_home_energy_monitor_word_puzzle.py) | `SmartDevice`, `SmartLight`, `SmartFan`, `SmartHome`, `WordPuzzleGame` | Smart-device controls, energy estimates and an interactive word puzzle. |
+| [`photo_video_portfolio_manager.py`](photo_video_portfolio_manager.py) | `MediaAsset`, `Photo`, `Video`, `PhotoAlbum`, `PortfolioLibrary` | Abstract classes, inheritance, composition, searching and sorting. |
+| [`photography_contest_manager.py`](photography_contest_manager.py) | `PhotoEntry`, `Participant`, `PhotographyContest` | Photo submissions, score validation, category winners and leaderboard. |
+| [`art_workshop_registration_manager.py`](art_workshop_registration_manager.py) | `Workshop`, `OnlineWorkshop`, `InPersonWorkshop`, `Participant`, `Registration`, `WorkshopManager` | Workshop registration, capacity, fee calculation and cancellation. |
+| [`study_session_planner.py`](study_session_planner.py) | `StudyTopic`, `StudySession`, `StudyPlanner` | Study scheduling, time-conflict detection, session status and progress reports. |
+| [`parcel_delivery_tracking_tests.py`](parcel_delivery_tracking_tests.py) | `ParcelTests` | Unit tests for parcel charges, validation, delivery status and duplicate IDs. |
 
 ## Daily OOP Projects
 
 ### 26 November 2026 — Study Session Planner
 
-**File:** [`task_13.py`](task_13.py)
+**File:** [`study_session_planner.py`](study_session_planner.py)
 
 - Creates and validates study topics.
 - Schedules sessions and detects overlapping planned sessions.
@@ -87,12 +87,12 @@ Replace the filename with any exercise from the file guide below.
 Run:
 
 ```bash
-python task_13.py
+python study_session_planner.py
 ```
 
 ### 24 November 2026 — Art Workshop Registration Manager
 
-**File:** [`task_12.py`](task_12.py)
+**File:** [`art_workshop_registration_manager.py`](art_workshop_registration_manager.py)
 
 - Manages online and in-person workshops with different fee rules.
 - Registers participants while checking capacity and duplicate entries.
@@ -104,12 +104,12 @@ python task_13.py
 Run:
 
 ```bash
-python task_12.py
+python art_workshop_registration_manager.py
 ```
 
 ### 22 November 2026 — Photography Contest Manager
 
-**File:** [`task_11.py`](task_11.py)
+**File:** [`photography_contest_manager.py`](photography_contest_manager.py)
 
 - Registers contest participants and photo entries.
 - Validates entry details and scores.
@@ -120,12 +120,12 @@ python task_12.py
 Run:
 
 ```bash
-python task_11.py
+python photography_contest_manager.py
 ```
 
 ### 17 November 2026 — Photo & Video Portfolio Manager
 
-**File:** [`task_10.py`](task_10.py)
+**File:** [`photo_video_portfolio_manager.py`](photo_video_portfolio_manager.py)
 
 Organizes photo and video assets into albums and a portfolio library.
 
@@ -133,7 +133,7 @@ Organizes photo and video assets into albums and a portfolio library.
 
 ### 15 November 2026 — Smart Home Energy Monitor & Word Puzzle
 
-**File:** [`task_9.py`](task_9.py)
+**File:** [`smart_home_energy_monitor_word_puzzle.py`](smart_home_energy_monitor_word_puzzle.py)
 
 Manages smart lights and fans, estimates energy use and includes an interactive word puzzle.
 
@@ -143,12 +143,12 @@ Manages smart lights and fans, estimates energy use and includes an interactive 
 
 | Date | Project | File |
 |---|---|---|
-| 14 Nov 2026 | Community Garden Manager | [`task_8.py`](task_8.py) |
-| 12 Nov 2026 | Photo Album Organizer | [`task_7.py`](task_7.py) |
-| 9 Nov 2026 | Parcel Delivery Tracking System | [`task_6.py`](task_6.py) |
-| 8 Nov 2026 | Photography Equipment Rental Tracker | [`task_5.py`](task_5.py) |
-| 4 Nov 2026 | Smart Plant Care Tracker | [`task_4.py`](task_4.py) |
-| 3 Nov 2026 | Music Playlist Manager | [`task_3.py`](task_3.py) |
+| 14 Nov 2026 | Community Garden Manager | [`community_garden_manager.py`](community_garden_manager.py) |
+| 12 Nov 2026 | Photo Album Organizer | [`photo_album_organizer.py`](photo_album_organizer.py) |
+| 9 Nov 2026 | Parcel Delivery Tracking System | [`parcel_delivery_tracking_system.py`](parcel_delivery_tracking_system.py) |
+| 8 Nov 2026 | Photography Equipment Rental Tracker | [`photography_equipment_rental_tracker.py`](photography_equipment_rental_tracker.py) |
+| 4 Nov 2026 | Smart Plant Care Tracker | [`smart_plant_care_tracker.py`](smart_plant_care_tracker.py) |
+| 3 Nov 2026 | Music Playlist Manager | [`music_playlist_manager.py`](music_playlist_manager.py) |
 
 ## Run Automated Tests
 
@@ -188,9 +188,9 @@ The parcel tests cover shipping charges, invalid weights, delivery-status rules,
 
 ## Suggested Learning Roadmap
 
-1. Start with `task_16.py` to understand classes, objects and constructors.
-2. Practise methods and calculations using `task_1.py`, `task_14.py` and `task_18.py`.
-3. Learn inheritance and polymorphism with `task_17.py`.
+1. Start with `laptop_class.py` to understand classes, objects and constructors.
+2. Practise methods and calculations using `calculator.py`, `employee_annual_salary_calculator.py` and `product_price_calculator.py`.
+3. Learn inheritance and polymorphism with `vehicle_inheritance_polymorphism.py`.
 4. Practise object interaction with the course and ticket projects.
 5. Explore encapsulation and composition in the daily mini-projects.
 6. Run the tests and add new test cases as you learn.
