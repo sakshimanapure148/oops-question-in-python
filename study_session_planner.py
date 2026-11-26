@@ -3,7 +3,7 @@ OOP practice: composition, encapsulation, properties, datetime validation,
 status management, filtering and summary reports.
 
 Run:
-    python daily_task_2026_11_26.py
+    python study_session_planner.py
 """
 
 from dataclasses import dataclass
