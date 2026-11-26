@@ -2,7 +2,7 @@
 OOP practice: encapsulation, composition, properties, validation and sorting.
 
 Run:
-    python daily_task_2026_11_22.py
+    python photography_contest_manager.py
 """
 
 from dataclasses import dataclass
