@@ -11,7 +11,7 @@ Concepts demonstrated:
 - Input validation, exceptions, searching and sorting
 
 Run:
-    python daily_task_2026_11_17.py
+    python photo_video_portfolio_manager.py
 """
 
 from abc import ABC, abstractmethod
