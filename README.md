@@ -87,9 +87,29 @@ This table lists every Python file currently present in the repository.
 | [`daily_task_2026_11_17.py`](daily_task_2026_11_17.py) | `MediaAsset`, `Photo`, `Video`, `PhotoAlbum`, `PortfolioLibrary` | Photo and video portfolio manager using abstract classes, inheritance, composition, searching and sorting. |
 | [`daily_task_2026_11_22.py`](daily_task_2026_11_22.py) | `PhotoEntry`, `Participant`, `PhotographyContest` | Photography contest with validated submissions, average scores and a leaderboard. |
 | [`daily_task_2026_11_24.py`](daily_task_2026_11_24.py) | `Workshop`, `OnlineWorkshop`, `InPersonWorkshop`, `Participant`, `Registration`, `WorkshopManager` | Art workshop registration, capacity checks, fee calculation, cancellation and reports. |
+
+| [`daily_task_2026_11_26.py`](daily_task_2026_11_26.py) | `StudyTopic`, `StudySession`, `StudyPlanner` | Study session planner with topic management, scheduling, time-conflict detection, status updates and progress reports. |
 | [`test_parcel_tracking.py`](test_parcel_tracking.py) | `ParcelTests` | Unit tests for parcel charges, validation, delivery status, duplicate IDs and collection totals. |
 
 ## Daily OOP Projects
+
+### 26 November 2026 — Study Session Planner
+
+**File:** [`daily_task_2026_11_26.py`](daily_task_2026_11_26.py)
+
+- Adds study topics with validated IDs and estimated study time.
+- Schedules sessions and detects overlapping planned sessions.
+- Tracks Planned, Completed and Skipped statuses.
+- Stores revision notes and generates a study progress report.
+
+**Concepts:** classes, dataclasses, composition, encapsulation, properties, type/value validation, `datetime`, filtering and sorting.
+
+Run:
+
+```bash
+python daily_task_2026_11_26.py
+```
+
 
 ### 24 November 2026 — Art Workshop Registration Manager
 
