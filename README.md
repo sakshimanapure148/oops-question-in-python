@@ -36,13 +36,13 @@ On Windows, `py --version` can be used. Python 3.9 or later is recommended.
 Run an exercise:
 
 ```bash
-python digital_art_commission_tracker.py
+python travel_planner.py
 ```
 
 On Windows:
 
 ```bash
-py digital_art_commission_tracker.py
+py travel_planner.py
 ```
 
 Replace the filename with any exercise from the file guide below.
@@ -70,9 +70,28 @@ Replace the filename with any exercise from the file guide below.
 | [`art_workshop_registration_manager.py`](art_workshop_registration_manager.py) | `Workshop`, `OnlineWorkshop`, `InPersonWorkshop`, `Participant`, `Registration`, `WorkshopManager` | Workshop registration, capacity, fee calculation and cancellation. |
 | [`study_session_planner.py`](study_session_planner.py) | `StudyTopic`, `StudySession`, `StudyPlanner` | Study scheduling, time-conflict detection, session status and progress reports. |
 | [`digital_art_commission_tracker.py`](digital_art_commission_tracker.py) | `Client`, `Commission`, `CommissionTracker` | Client details, adding commissions, updating status, displaying and searching commissions. |
+| [`travel_planner.py`](travel_planner.py) | `Destination`, `Trip`, `TravelPlanner` | Adding trips, displaying travel plans, trip budgets and searching by trip ID. |
 | [`parcel_delivery_tracking_tests.py`](parcel_delivery_tracking_tests.py) | `ParcelTests` | Unit tests for parcel charges, validation, delivery status and duplicate IDs. |
 
 ## Daily OOP Projects
+
+### 28 November 2026 — Travel Planner
+
+**File:** [`travel_planner.py`](travel_planner.py)
+
+- Stores destination city and country.
+- Creates trips with duration and budget.
+- Adds trips to a travel planner.
+- Displays all planned trips.
+- Searches for a trip using its ID.
+
+**Concepts:** classes, objects, constructors, methods, lists and object interaction.
+
+Run:
+
+```bash
+python travel_planner.py
+```
 
 ### 28 November 2026 — Digital Art Commission Tracker
 
