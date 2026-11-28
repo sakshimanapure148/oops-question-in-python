@@ -14,12 +14,12 @@ class Commission:
         self.price = price
         self.status = "Pending"
 
-    def update_status(self, new_status):
-        self.status = new_status
+    def update_status(self, status):
+        self.status = status
 
     def display_details(self):
         print("\nCommission ID:", self.commission_id)
-        print("Client Name:", self.client.name)
+        print("Client:", self.client.name)
         print("Email:", self.client.email)
         print("Artwork:", self.artwork)
         print("Price: Rs.", self.price)
@@ -32,14 +32,15 @@ class CommissionTracker:
 
     def add_commission(self, commission):
         self.commissions.append(commission)
-        print("Commission added successfully!")
+        print("Commission added successfully.")
 
-    def show_all_commissions(self):
-        if len(self.commissions) == 0:
-            print("No commissions available.")
-        else:
-            for commission in self.commissions:
-                commission.display_details()
+    def show_commissions(self):
+        if not self.commissions:
+            print("No commissions found.")
+            return
+
+        for commission in self.commissions:
+            commission.display_details()
 
     def search_commission(self, commission_id):
         for commission in self.commissions:
@@ -50,22 +51,26 @@ class CommissionTracker:
         print("Commission not found.")
 
 
-# Main program
-tracker = CommissionTracker()
+def main():
+    tracker = CommissionTracker()
 
-client1 = Client("Aarav Sharma", "aarav@gmail.com")
-client2 = Client("Meera Joshi", "meera@gmail.com")
+    client1 = Client("Aarav Sharma", "aarav@gmail.com")
+    client2 = Client("Meera Joshi", "meera@gmail.com")
 
-commission1 = Commission("A101", client1, "Digital Portrait", 1200)
-commission2 = Commission("A102", client2, "Book Cover", 2000)
+    commission1 = Commission("A101", client1, "Digital Portrait", 1200)
+    commission2 = Commission("A102", client2, "Book Cover", 2000)
 
-tracker.add_commission(commission1)
-tracker.add_commission(commission2)
+    tracker.add_commission(commission1)
+    tracker.add_commission(commission2)
 
-commission1.update_status("Completed")
+    commission1.update_status("Completed")
 
-print("\nAll Art Commissions")
-tracker.show_all_commissions()
+    print("\nAll Art Commissions:")
+    tracker.show_commissions()
 
-print("\nSearch Commission")
-tracker.search_commission("A102")
+    print("\nSearch Result:")
+    tracker.search_commission("A102")
+
+
+if __name__ == "__main__":
+    main()
