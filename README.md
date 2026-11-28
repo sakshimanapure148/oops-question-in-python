@@ -69,7 +69,7 @@ Replace the filename with any exercise from the file guide below.
 | [`photography_contest_manager.py`](photography_contest_manager.py) | `PhotoEntry`, `Participant`, `PhotographyContest` | Photo submissions, score validation, category winners and leaderboard. |
 | [`art_workshop_registration_manager.py`](art_workshop_registration_manager.py) | `Workshop`, `OnlineWorkshop`, `InPersonWorkshop`, `Participant`, `Registration`, `WorkshopManager` | Workshop registration, capacity, fee calculation and cancellation. |
 | [`study_session_planner.py`](study_session_planner.py) | `StudyTopic`, `StudySession`, `StudyPlanner` | Study scheduling, time-conflict detection, session status and progress reports. |
-| [`digital_art_commission_tracker.py`](digital_art_commission_tracker.py) | `Client`, `Commission`, `CommissionStudio` | Commission tracking, status transitions, revision limits, searching and revenue summaries. |
+| [`digital_art_commission_tracker.py`](digital_art_commission_tracker.py) | `Client`, `Commission`, `CommissionTracker` | Client details, adding commissions, updating status, displaying and searching commissions. |
 | [`parcel_delivery_tracking_tests.py`](parcel_delivery_tracking_tests.py) | `ParcelTests` | Unit tests for parcel charges, validation, delivery status and duplicate IDs. |
 
 ## Daily OOP Projects
@@ -78,14 +78,13 @@ Replace the filename with any exercise from the file guide below.
 
 **File:** [`digital_art_commission_tracker.py`](digital_art_commission_tracker.py)
 
-- Stores client and commission details with input validation.
-- Tracks commission status through allowed workflow transitions.
-- Calculates base price plus optional rush fees.
-- Tracks revision limits and project notes.
-- Searches commissions by client and displays pending work.
-- Generates a summary of completed commission revenue.
+- Stores client name and email details.
+- Creates and adds digital art commissions.
+- Displays all commission details.
+- Updates the status of a commission.
+- Searches for a commission using its ID.
 
-**Concepts:** classes, dataclasses, encapsulation, composition, properties, enums, validation, filtering, sorting and exception handling.
+**Concepts:** classes, objects, constructors, methods, lists and object interaction.
 
 Run:
 
