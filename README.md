@@ -36,13 +36,13 @@ On Windows, `py --version` can be used. Python 3.9 or later is recommended.
 Run an exercise:
 
 ```bash
-python study_session_planner.py
+python digital_art_commission_tracker.py
 ```
 
 On Windows:
 
 ```bash
-py study_session_planner.py
+py digital_art_commission_tracker.py
 ```
 
 Replace the filename with any exercise from the file guide below.
@@ -69,9 +69,29 @@ Replace the filename with any exercise from the file guide below.
 | [`photography_contest_manager.py`](photography_contest_manager.py) | `PhotoEntry`, `Participant`, `PhotographyContest` | Photo submissions, score validation, category winners and leaderboard. |
 | [`art_workshop_registration_manager.py`](art_workshop_registration_manager.py) | `Workshop`, `OnlineWorkshop`, `InPersonWorkshop`, `Participant`, `Registration`, `WorkshopManager` | Workshop registration, capacity, fee calculation and cancellation. |
 | [`study_session_planner.py`](study_session_planner.py) | `StudyTopic`, `StudySession`, `StudyPlanner` | Study scheduling, time-conflict detection, session status and progress reports. |
+| [`digital_art_commission_tracker.py`](digital_art_commission_tracker.py) | `Client`, `Commission`, `CommissionStudio` | Commission tracking, status transitions, revision limits, searching and revenue summaries. |
 | [`parcel_delivery_tracking_tests.py`](parcel_delivery_tracking_tests.py) | `ParcelTests` | Unit tests for parcel charges, validation, delivery status and duplicate IDs. |
 
 ## Daily OOP Projects
+
+### 28 November 2026 — Digital Art Commission Tracker
+
+**File:** [`digital_art_commission_tracker.py`](digital_art_commission_tracker.py)
+
+- Stores client and commission details with input validation.
+- Tracks commission status through allowed workflow transitions.
+- Calculates base price plus optional rush fees.
+- Tracks revision limits and project notes.
+- Searches commissions by client and displays pending work.
+- Generates a summary of completed commission revenue.
+
+**Concepts:** classes, dataclasses, encapsulation, composition, properties, enums, validation, filtering, sorting and exception handling.
+
+Run:
+
+```bash
+python digital_art_commission_tracker.py
+```
 
 ### 26 November 2026 — Study Session Planner
 
